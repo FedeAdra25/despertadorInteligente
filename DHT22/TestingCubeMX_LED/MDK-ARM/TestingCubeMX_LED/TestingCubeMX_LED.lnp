@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"testingcubemx_led\startup_stm32f103xb.o"
+"testingcubemx_led\my_dht22.o"
+"testingcubemx_led\main.o"
+"testingcubemx_led\stm32f1xx_it.o"
+"testingcubemx_led\stm32f1xx_hal_msp.o"
+"testingcubemx_led\stm32f1xx_hal_gpio_ex.o"
+"testingcubemx_led\stm32f1xx_hal_tim.o"
+"testingcubemx_led\stm32f1xx_hal_tim_ex.o"
+"testingcubemx_led\stm32f1xx_hal_uart.o"
+"testingcubemx_led\stm32f1xx_hal.o"
+"testingcubemx_led\stm32f1xx_hal_rcc.o"
+"testingcubemx_led\stm32f1xx_hal_rcc_ex.o"
+"testingcubemx_led\stm32f1xx_hal_gpio.o"
+"testingcubemx_led\stm32f1xx_hal_dma.o"
+"testingcubemx_led\stm32f1xx_hal_cortex.o"
+"testingcubemx_led\stm32f1xx_hal_pwr.o"
+"testingcubemx_led\stm32f1xx_hal_flash.o"
+"testingcubemx_led\stm32f1xx_hal_flash_ex.o"
+"testingcubemx_led\stm32f1xx_hal_exti.o"
+"testingcubemx_led\system_stm32f1xx.o"
+--strict --scatter "TestingCubeMX_LED\TestingCubeMX_LED.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "TestingCubeMX_LED.map" -o TestingCubeMX_LED\TestingCubeMX_LED.axf

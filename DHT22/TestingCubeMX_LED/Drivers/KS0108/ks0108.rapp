@@ -1,0 +1,67 @@
+
+<ApplicationBuild Header="ks0108" Extern=".\ks0108.rapp" Path=".\ks0108.rapp" OutputFile=".\ks0108.elf" sate="96" >
+	<NodeC Path=".\main.c" Header="main.c" Marker="0" OutputFile=".\main.o" sate="2" >
+		<Options>
+			<Config Header="Standard" >
+				<Set Header="GCC" >
+					<Section Header="OPTIMIZE" >
+						<Property Header="Optimize" Value="-Os" Removable="1" />
+																														
+					</Section>
+																								
+				</Set>
+														
+			</Config>
+										
+		</Options>
+						
+	</NodeC>
+	<NodeC Path=".\KS0108-STM32.c" Header="KS0108-STM32.c" Marker="-1" OutputFile=".\KS0108-STM32.o" sate="0" />
+	<NodeC Path=".\graphic.c" Header="graphic.c" Marker="-1" OutputFile=".\graphic.o" sate="0" />
+	<NodeC Path=".\KS0108.c" Header="KS0108.c" Marker="-1" OutputFile=".\KS0108.o" sate="0" />
+	<Options>
+		<Config Header="Standard" >
+			<Set Header="ApplicationBuild" >
+				<Section Header="General" >
+					<Property Header="TargetFamily" Value="ARM" />
+																																		
+				</Section>
+				<Section Header="Directories" >
+					<Property Header="IncDir" Value="$(RkitLib)\ARM\include;." Removable="1" />
+							
+				</Section>
+					
+			</Set>
+			<Set Header="Target" >
+				<Section Header="ProcessorARM" >
+					<Property Header="Processor" Value="STM32F103VBT6" />
+																																		
+				</Section>
+				<Section Header="ToolSetARM" >
+					<Property Header="BuildToolSetARM" Value="ARM\\GNU.config" Removable="1" />
+																																		
+				</Section>
+																										
+			</Set>
+			<Set Header="LD" >
+				<Section Header="LIB" >
+					<Property Header="UART0PUTC" Value="0" Removable="1" />
+					<Property Header="SMALLP" Value="0" Removable="1" />
+																																		
+				</Section>
+																										
+			</Set>
+			<Set Header="GCC" >
+				<Section Header="OPTIMIZE" >
+					<Property Header="Optimize" Value="-Os" Removable="1" />
+																									
+				</Section>
+				<Section Header="DEBUG" >
+					<Property Header="DEBUGINFO" Value="" Removable="1" />
+																									
+				</Section>
+																			
+			</Set>
+		</Config>
+	</Options>
+</ApplicationBuild>

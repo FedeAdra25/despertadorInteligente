@@ -1,0 +1,4 @@
+
+<Project Header="Project 'ks0108'" Path=".\ks0108.rprj" Project="Yes" OutputFile="" sate="96" ActiveApp="ks0108" >
+	<ApplicationBuild Header="ks0108" Extern=".\ks0108.rapp" Path=".\ks0108.rapp" OutputFile=".\ks0108.elf" sate="96" ></ApplicationBuild>
+</Project>

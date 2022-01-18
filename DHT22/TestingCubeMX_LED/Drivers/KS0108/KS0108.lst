@@ -1,0 +1,190 @@
+
+E:\WORK\uK\STM32\KS0108\KS0108.o:     file format elf32-littlearm
+E:\WORK\uK\STM32\KS0108\KS0108.o
+
+Disassembly of section .text.GLCD_WriteChar:
+
+00000000 <GLCD_WriteChar>:
+GLCD_WriteChar():
+   0:	3820      	subs	r0, #32
+   2:	2305      	movs	r3, #5
+   4:	b240      	sxtb	r0, r0
+   6:	b570      	push	{r4, r5, r6, lr}
+   8:	fb00 f503 	mul.w	r5, r0, r3
+   c:	4b07      	ldr	r3, [pc, #28]	(2c <GLCD_WriteChar+0x2c>)
+   e:	18ec      	adds	r4, r5, r3
+  10:	4620      	mov	r0, r4
+  12:	f7ff fffe 	bl	0 <GLCD_ReadByteFromROMMemory>
+  16:	f7ff fffe 	bl	0 <GLCD_WriteData>
+  1a:	4b05      	ldr	r3, [pc, #20]	(30 <GLCD_WriteChar+0x30>)
+  1c:	3401      	adds	r4, #1
+  1e:	18eb      	adds	r3, r5, r3
+  20:	429c      	cmp	r4, r3
+  22:	d1f5      	bne.n	10 <GLCD_WriteChar+0x10>
+  24:	2000      	movs	r0, #0
+  26:	f7ff fffe 	bl	0 <GLCD_WriteData>
+  2a:	bd70      	pop	{r4, r5, r6, pc}
+  2c:	00000000 	.word	0x00000000
+  30:	00000005 	.word	0x00000005
+Disassembly of section .text.GLCD_WriteString:
+
+00000000 <GLCD_WriteString>:
+GLCD_WriteString():
+   0:	b510      	push	{r4, lr}
+   2:	4604      	mov	r4, r0
+   4:	e003      	b.n	e <GLCD_WriteString+0xe>
+   6:	b240      	sxtb	r0, r0
+   8:	3401      	adds	r4, #1
+   a:	f7ff fffe 	bl	0 <GLCD_WriteString>
+   e:	7820      	ldrb	r0, [r4, #0]
+  10:	2800      	cmp	r0, #0
+  12:	d1f8      	bne.n	6 <GLCD_WriteString+0x6>
+  14:	bd10      	pop	{r4, pc}
+  16:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.GLCD_GoTo:
+
+00000000 <GLCD_GoTo>:
+GLCD_GoTo():
+   0:	4b13      	ldr	r3, [pc, #76]	(50 <GLCD_GoTo+0x50>)
+   2:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
+   6:	4605      	mov	r5, r0
+   8:	4688      	mov	r8, r1
+   a:	7018      	strb	r0, [r3, #0]
+   c:	7059      	strb	r1, [r3, #1]
+   e:	2600      	movs	r6, #0
+  10:	b2f4      	uxtb	r4, r6
+  12:	2040      	movs	r0, #64
+  14:	4621      	mov	r1, r4
+  16:	f048 07b8 	orr.w	r7, r8, #184	; 0xb8
+  1a:	f7ff fffe 	bl	0 <GLCD_WriteCommand>
+  1e:	4638      	mov	r0, r7
+  20:	4621      	mov	r1, r4
+  22:	f7ff fffe 	bl	0 <GLCD_WriteCommand>
+  26:	3601      	adds	r6, #1
+  28:	20c0      	movs	r0, #192
+  2a:	4621      	mov	r1, r4
+  2c:	f7ff fffe 	bl	0 <GLCD_WriteCommand>
+  30:	2e02      	cmp	r6, #2
+  32:	d1ed      	bne.n	10 <GLCD_GoTo+0x10>
+  34:	09ac      	lsrs	r4, r5, #6
+  36:	f005 003f 	and.w	r0, r5, #63	; 0x3f
+  3a:	4621      	mov	r1, r4
+  3c:	f040 0040 	orr.w	r0, r0, #64	; 0x40
+  40:	f7ff fffe 	bl	0 <GLCD_WriteCommand>
+  44:	4638      	mov	r0, r7
+  46:	4621      	mov	r1, r4
+  48:	f7ff fffe 	bl	0 <GLCD_WriteCommand>
+  4c:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
+  50:	00000000 	.word	0x00000000
+Disassembly of section .text.GLCD_Bitmap:
+
+00000000 <GLCD_Bitmap>:
+GLCD_Bitmap():
+   0:	e92d 4ff8 	stmdb	sp!, {r3, r4, r5, r6, r7, r8, r9, sl, fp, lr}
+   4:	f89d 9028 	ldrb.w	r9, [sp, #40]
+   8:	4606      	mov	r6, r0
+   a:	468b      	mov	fp, r1
+   c:	4692      	mov	sl, r2
+   e:	4698      	mov	r8, r3
+  10:	2700      	movs	r7, #0
+  12:	e013      	b.n	3c <GLCD_Bitmap+0x3c>
+  14:	4451      	add	r1, sl
+  16:	4658      	mov	r0, fp
+  18:	b2c9      	uxtb	r1, r1
+  1a:	f7ff fffe 	bl	0 <GLCD_Bitmap>
+  1e:	2500      	movs	r5, #0
+  20:	4630      	mov	r0, r6
+  22:	e007      	b.n	34 <GLCD_Bitmap+0x34>
+  24:	1c44      	adds	r4, r0, #1
+  26:	f7ff fffe 	bl	0 <GLCD_ReadByteFromROMMemory>
+  2a:	f7ff fffe 	bl	0 <GLCD_WriteData>
+  2e:	1c6b      	adds	r3, r5, #1
+  30:	b2dd      	uxtb	r5, r3
+  32:	4620      	mov	r0, r4
+  34:	4545      	cmp	r5, r8
+  36:	d1f5      	bne.n	24 <GLCD_WriteData+0x24>
+  38:	4446      	add	r6, r8
+  3a:	3701      	adds	r7, #1
+  3c:	b2f9      	uxtb	r1, r7
+  3e:	ebb1 0fd9 	cmp.w	r1, r9, lsr #3
+  42:	d3e7      	bcc.n	14 <GLCD_WriteData+0x14>
+  44:	e8bd 8ff8 	ldmia.w	sp!, {r3, r4, r5, r6, r7, r8, r9, sl, fp, pc}
+Disassembly of section .text.GLCD_SetPixel:
+
+00000000 <GLCD_SetPixel>:
+GLCD_SetPixel():
+   0:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
+   4:	08cc      	lsrs	r4, r1, #3
+   6:	4605      	mov	r5, r0
+   8:	460e      	mov	r6, r1
+   a:	4621      	mov	r1, r4
+   c:	4690      	mov	r8, r2
+   e:	f7ff fffe 	bl	0 <GLCD_SetPixel>
+  12:	f7ff fffe 	bl	0 <GLCD_ReadData>
+  16:	4621      	mov	r1, r4
+  18:	4628      	mov	r0, r5
+  1a:	f7ff fffe 	bl	0 <GLCD_SetPixel>
+  1e:	f7ff fffe 	bl	0 <GLCD_ReadData>
+  22:	4621      	mov	r1, r4
+  24:	4607      	mov	r7, r0
+  26:	4628      	mov	r0, r5
+  28:	f7ff fffe 	bl	0 <GLCD_SetPixel>
+  2c:	f006 0607 	and.w	r6, r6, #7	; 0x7
+  30:	f1b8 0f00 	cmp.w	r8, #0	; 0x0
+  34:	d004      	beq.n	40 <GLCD_SetPixel+0x40>
+  36:	2301      	movs	r3, #1
+  38:	40b3      	lsls	r3, r6
+  3a:	ea47 0303 	orr.w	r3, r7, r3
+  3e:	e003      	b.n	48 <GLCD_SetPixel+0x48>
+  40:	2301      	movs	r3, #1
+  42:	40b3      	lsls	r3, r6
+  44:	ea27 0303 	bic.w	r3, r7, r3
+  48:	b2d8      	uxtb	r0, r3
+  4a:	f7ff fffe 	bl	0 <GLCD_WriteData>
+  4e:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
+  52:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.GLCD_ClearScreen:
+
+00000000 <GLCD_ClearScreen>:
+GLCD_ClearScreen():
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	2500      	movs	r5, #0
+   4:	2000      	movs	r0, #0
+   6:	b2e9      	uxtb	r1, r5
+   8:	f7ff fffe 	bl	0 <GLCD_ClearScreen>
+   c:	2400      	movs	r4, #0
+   e:	2000      	movs	r0, #0
+  10:	f7ff fffe 	bl	0 <GLCD_WriteData>
+  14:	1c63      	adds	r3, r4, #1
+  16:	b2dc      	uxtb	r4, r3
+  18:	2c80      	cmp	r4, #128
+  1a:	d1f8      	bne.n	e <GLCD_WriteData+0xe>
+  1c:	3501      	adds	r5, #1
+  1e:	2d08      	cmp	r5, #8
+  20:	d1f0      	bne.n	4 <GLCD_WriteData+0x4>
+  22:	bd70      	pop	{r4, r5, r6, pc}
+Disassembly of section .text.GLCD_TextGoTo:
+
+00000000 <GLCD_TextGoTo>:
+GLCD_TextGoTo():
+   0:	2306      	movs	r3, #6
+   2:	fb00 f003 	mul.w	r0, r0, r3
+   6:	b510      	push	{r4, lr}
+   8:	f000 00fe 	and.w	r0, r0, #254	; 0xfe
+   c:	f7ff fffe 	bl	0 <GLCD_TextGoTo>
+  10:	bd10      	pop	{r4, pc}
+  12:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.GLCD_Initialize:
+
+00000000 <GLCD_Initialize>:
+GLCD_Initialize():
+   0:	b510      	push	{r4, lr}
+   2:	f7ff fffe 	bl	0 <GLCD_InitializePorts>
+   6:	2400      	movs	r4, #0
+   8:	203f      	movs	r0, #63
+   a:	b2e1      	uxtb	r1, r4
+   c:	3401      	adds	r4, #1
+   e:	f7ff fffe 	bl	0 <GLCD_WriteCommand>
+  12:	2c03      	cmp	r4, #3
+  14:	d1f8      	bne.n	8 <GLCD_WriteCommand+0x8>
+  16:	bd10      	pop	{r4, pc}

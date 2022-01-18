@@ -1,0 +1,226 @@
+
+E:\WORK\uK\STM32\KS0108\graphic.o:     file format elf32-littlearm
+E:\WORK\uK\STM32\KS0108\graphic.o
+
+Disassembly of section .text.GLCD_Line:
+
+00000000 <GLCD_Line>:
+GLCD_Line():
+   0:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+   4:	ebc0 0602 	rsb	r6, r0, r2
+   8:	b085      	sub	sp, #20
+   a:	ebc1 0503 	rsb	r5, r1, r3
+   e:	2e00      	cmp	r6, #0
+  10:	4680      	mov	r8, r0
+  12:	460f      	mov	r7, r1
+  14:	9202      	str	r2, [sp, #8]
+  16:	9301      	str	r3, [sp, #4]
+  18:	ea4f 0a46 	mov.w	sl, r6, lsl #1
+  1c:	ea4f 0945 	mov.w	r9, r5, lsl #1
+  20:	db02      	blt.n	28 <GLCD_Line+0x28>
+  22:	2201      	movs	r2, #1
+  24:	9203      	str	r2, [sp, #12]
+  26:	e005      	b.n	34 <GLCD_Line+0x34>
+  28:	f04f 33ff 	mov.w	r3, #4294967295	; 0xffffffff
+  2c:	4276      	negs	r6, r6
+  2e:	f1ca 0a00 	rsb	sl, sl, #0	; 0x0
+  32:	9303      	str	r3, [sp, #12]
+  34:	2d00      	cmp	r5, #0
+  36:	db02      	blt.n	3e <GLCD_Line+0x3e>
+  38:	f04f 0b01 	mov.w	fp, #1	; 0x1
+  3c:	e004      	b.n	48 <GLCD_Line+0x48>
+  3e:	426d      	negs	r5, r5
+  40:	f1c9 0900 	rsb	r9, r9, #0	; 0x0
+  44:	f04f 3bff 	mov.w	fp, #4294967295	; 0xffffffff
+  48:	fa5f f088 	uxtb.w	r0, r8
+  4c:	b2f9      	uxtb	r1, r7
+  4e:	2201      	movs	r2, #1
+  50:	f7ff fffe 	bl	0 <GLCD_SetPixel>
+  54:	b90e      	cbnz	r6, 5a <GLCD_Line+0x5a>
+  56:	2d00      	cmp	r5, #0
+  58:	d02f      	beq.n	ba <GLCD_Line+0xba>
+  5a:	42b5      	cmp	r5, r6
+  5c:	dc17      	bgt.n	8e <GLCD_Line+0x8e>
+  5e:	9a03      	ldr	r2, [sp, #12]
+  60:	463d      	mov	r5, r7
+  62:	eb02 0408 	add.w	r4, r2, r8
+  66:	2700      	movs	r7, #0
+  68:	444f      	add	r7, r9
+  6a:	42b7      	cmp	r7, r6
+  6c:	bfc4      	itt	gt
+  6e:	445d      	addgt	r5, fp
+  70:	ebca 0707 	rsbgt	r7, sl, r7
+  74:	b2e0      	uxtb	r0, r4
+  76:	2201      	movs	r2, #1
+  78:	b2e9      	uxtb	r1, r5
+  7a:	f7ff fffe 	bl	0 <GLCD_SetPixel>
+  7e:	9b03      	ldr	r3, [sp, #12]
+  80:	9a02      	ldr	r2, [sp, #8]
+  82:	18e4      	adds	r4, r4, r3
+  84:	ebc3 0304 	rsb	r3, r3, r4
+  88:	4293      	cmp	r3, r2
+  8a:	d1ed      	bne.n	68 <GLCD_Line+0x68>
+  8c:	e015      	b.n	ba <GLCD_Line+0xba>
+  8e:	eb0b 0407 	add.w	r4, fp, r7
+  92:	4646      	mov	r6, r8
+  94:	2700      	movs	r7, #0
+  96:	4457      	add	r7, sl
+  98:	42af      	cmp	r7, r5
+  9a:	dd03      	ble.n	a4 <GLCD_Line+0xa4>
+  9c:	9b03      	ldr	r3, [sp, #12]
+  9e:	ebc9 0707 	rsb	r7, r9, r7
+  a2:	18f6      	adds	r6, r6, r3
+  a4:	2201      	movs	r2, #1
+  a6:	b2e1      	uxtb	r1, r4
+  a8:	b2f0      	uxtb	r0, r6
+  aa:	f7ff fffe 	bl	0 <GLCD_SetPixel>
+  ae:	445c      	add	r4, fp
+  b0:	9a01      	ldr	r2, [sp, #4]
+  b2:	ebcb 0304 	rsb	r3, fp, r4
+  b6:	4293      	cmp	r3, r2
+  b8:	d1ed      	bne.n	96 <GLCD_SetPixel+0x96>
+  ba:	b005      	add	sp, #20
+  bc:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+Disassembly of section .text.GLCD_Circle:
+
+00000000 <GLCD_Circle>:
+GLCD_Circle():
+   0:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+   4:	0053      	lsls	r3, r2, #1
+   6:	b085      	sub	sp, #20
+   8:	4617      	mov	r7, r2
+   a:	f1c3 0901 	rsb	r9, r3, #1	; 0x1
+   e:	2200      	movs	r2, #0
+  10:	2301      	movs	r3, #1
+  12:	4683      	mov	fp, r0
+  14:	468a      	mov	sl, r1
+  16:	9200      	str	r2, [sp, #0]
+  18:	9301      	str	r3, [sp, #4]
+  1a:	9202      	str	r2, [sp, #8]
+  1c:	9203      	str	r2, [sp, #12]
+  1e:	9a03      	ldr	r2, [sp, #12]
+  20:	b2fe      	uxtb	r6, r7
+  22:	eb06 080b 	add.w	r8, r6, fp
+  26:	eb02 040a 	add.w	r4, r2, sl
+  2a:	fa5f f888 	uxtb.w	r8, r8
+  2e:	b2e4      	uxtb	r4, r4
+  30:	ebc6 050b 	rsb	r5, r6, fp
+  34:	4640      	mov	r0, r8
+  36:	4621      	mov	r1, r4
+  38:	2201      	movs	r2, #1
+  3a:	b2ed      	uxtb	r5, r5
+  3c:	f7ff fffe 	bl	0 <GLCD_SetPixel>
+  40:	4628      	mov	r0, r5
+  42:	4621      	mov	r1, r4
+  44:	2201      	movs	r2, #1
+  46:	f7ff fffe 	bl	0 <GLCD_SetPixel>
+  4a:	9b03      	ldr	r3, [sp, #12]
+  4c:	4628      	mov	r0, r5
+  4e:	ebc3 040a 	rsb	r4, r3, sl
+  52:	b2e4      	uxtb	r4, r4
+  54:	4621      	mov	r1, r4
+  56:	2201      	movs	r2, #1
+  58:	f7ff fffe 	bl	0 <GLCD_SetPixel>
+  5c:	4640      	mov	r0, r8
+  5e:	4621      	mov	r1, r4
+  60:	2201      	movs	r2, #1
+  62:	f7ff fffe 	bl	0 <GLCD_SetPixel>
+  66:	9a03      	ldr	r2, [sp, #12]
+  68:	eb06 050a 	add.w	r5, r6, sl
+  6c:	eb02 080b 	add.w	r8, r2, fp
+  70:	fa5f f888 	uxtb.w	r8, r8
+  74:	b2ed      	uxtb	r5, r5
+  76:	2201      	movs	r2, #1
+  78:	4640      	mov	r0, r8
+  7a:	4629      	mov	r1, r5
+  7c:	f7ff fffe 	bl	0 <GLCD_SetPixel>
+  80:	9b03      	ldr	r3, [sp, #12]
+  82:	ebc6 060a 	rsb	r6, r6, sl
+  86:	ebc3 040b 	rsb	r4, r3, fp
+  8a:	b2e4      	uxtb	r4, r4
+  8c:	2201      	movs	r2, #1
+  8e:	4620      	mov	r0, r4
+  90:	4629      	mov	r1, r5
+  92:	b2f6      	uxtb	r6, r6
+  94:	f7ff fffe 	bl	0 <GLCD_SetPixel>
+  98:	2201      	movs	r2, #1
+  9a:	4620      	mov	r0, r4
+  9c:	4631      	mov	r1, r6
+  9e:	f7ff fffe 	bl	0 <GLCD_SetPixel>
+  a2:	2201      	movs	r2, #1
+  a4:	4640      	mov	r0, r8
+  a6:	4631      	mov	r1, r6
+  a8:	f7ff fffe 	bl	0 <GLCD_SetPixel>
+  ac:	9a02      	ldr	r2, [sp, #8]
+  ae:	9b01      	ldr	r3, [sp, #4]
+  b0:	18d2      	adds	r2, r2, r3
+  b2:	eb09 0342 	add.w	r3, r9, r2, lsl #1
+  b6:	2b00      	cmp	r3, #0
+  b8:	9202      	str	r2, [sp, #8]
+  ba:	dd04      	ble.n	c6 <GLCD_SetPixel+0xc6>
+  bc:	444a      	add	r2, r9
+  be:	3f01      	subs	r7, #1
+  c0:	9202      	str	r2, [sp, #8]
+  c2:	f109 0902 	add.w	r9, r9, #2	; 0x2
+  c6:	9a01      	ldr	r2, [sp, #4]
+  c8:	9b00      	ldr	r3, [sp, #0]
+  ca:	3202      	adds	r2, #2
+  cc:	9201      	str	r2, [sp, #4]
+  ce:	9a03      	ldr	r2, [sp, #12]
+  d0:	3301      	adds	r3, #1
+  d2:	9300      	str	r3, [sp, #0]
+  d4:	1c53      	adds	r3, r2, #1
+  d6:	b2db      	uxtb	r3, r3
+  d8:	9303      	str	r3, [sp, #12]
+  da:	9b00      	ldr	r3, [sp, #0]
+  dc:	429f      	cmp	r7, r3
+  de:	da9e      	bge.n	1e <GLCD_SetPixel+0x1e>
+  e0:	b005      	add	sp, #20
+  e2:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+  e6:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.GLCD_Rectangle:
+
+00000000 <GLCD_Rectangle>:
+GLCD_Rectangle():
+   0:	e92d 47f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
+   4:	4607      	mov	r7, r0
+   6:	460e      	mov	r6, r1
+   8:	4691      	mov	r9, r2
+   a:	4698      	mov	r8, r3
+   c:	2500      	movs	r5, #0
+   e:	e00f      	b.n	30 <GLCD_Rectangle+0x30>
+  10:	19ac      	adds	r4, r5, r6
+  12:	b2e4      	uxtb	r4, r4
+  14:	4638      	mov	r0, r7
+  16:	4621      	mov	r1, r4
+  18:	2201      	movs	r2, #1
+  1a:	f7ff fffe 	bl	0 <GLCD_SetPixel>
+  1e:	1e78      	subs	r0, r7, #1
+  20:	4448      	add	r0, r9
+  22:	b2c0      	uxtb	r0, r0
+  24:	4621      	mov	r1, r4
+  26:	2201      	movs	r2, #1
+  28:	f7ff fffe 	bl	0 <GLCD_SetPixel>
+  2c:	1c6b      	adds	r3, r5, #1
+  2e:	b2dd      	uxtb	r5, r3
+  30:	4545      	cmp	r5, r8
+  32:	d1ed      	bne.n	10 <GLCD_Rectangle+0x10>
+  34:	2500      	movs	r5, #0
+  36:	e00f      	b.n	58 <GLCD_Rectangle+0x58>
+  38:	19ec      	adds	r4, r5, r7
+  3a:	b2e4      	uxtb	r4, r4
+  3c:	4620      	mov	r0, r4
+  3e:	4631      	mov	r1, r6
+  40:	2201      	movs	r2, #1
+  42:	f7ff fffe 	bl	0 <GLCD_SetPixel>
+  46:	1e71      	subs	r1, r6, #1
+  48:	4441      	add	r1, r8
+  4a:	4620      	mov	r0, r4
+  4c:	b2c9      	uxtb	r1, r1
+  4e:	2201      	movs	r2, #1
+  50:	f7ff fffe 	bl	0 <GLCD_SetPixel>
+  54:	1c6b      	adds	r3, r5, #1
+  56:	b2dd      	uxtb	r5, r3
+  58:	454d      	cmp	r5, r9
+  5a:	d1ed      	bne.n	38 <GLCD_SetPixel+0x38>
+  5c:	e8bd 87f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, pc}
