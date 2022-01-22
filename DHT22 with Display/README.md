@@ -1,5 +1,17 @@
 o famoso Readme!
 
+/* Lo mismo que lo del DHT22.
+El display esta explicado en el codigo. Hice una libreria bonita
+
+Unico problema: Es lento. El simulador es lento. L E N T O
+mucho
+duele
+Hay que poner delays de 5 segundos solo para leer lo que escribe antes de que crashee
+cuando tiene que hacer las 500+ iteraciones del display. 
+(Las hace, se cuelga, vuelve y el delay).
+TRISTEZA
+*/
+
 Abri TestingCubeMX_LED/TestingCubeMX_LED.ioc
 
 Esto sirve para seleccionar que pines usar, poner la USART con el BAUD que quieras,
