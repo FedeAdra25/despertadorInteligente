@@ -103,6 +103,10 @@ int main(void)
 	char onMsg[] = "ON\n\r";
 	char offMsg[] = "OFF\n\r";
 	
+	unsigned char n5110_buffer[6][84];	//6 Rows 84 Columns
+	
+
+	
 	/*Systick Init*/
 	//systick_init();	//For some reason, this crashes everything 
 	
@@ -114,6 +118,24 @@ int main(void)
 	
 	/* N5110 Init */
 	n5110_init(1);
+	
+	/* Agregamos una imagen*/
+	ImgType saitama_pic = {.h = saitama_rows, .w = saitama_cols, .x = 0, .y = 0};
+	saitama_pic.image[0] = saitama;
+	
+	/* Agregamos otra imagen*/
+	ImgType goku_pic = {.h = Goku2_rows, .w = Goku2_cols, .x = 0, .y = 0};
+	goku_pic.image[1] = Goku2;
+	
+	
+	
+	n5110_clear();
+	n5110_clear_buffer(n5110_buffer);
+	
+	n5110_update_buffer(goku_pic, 1, n5110_buffer);
+	//n5110_update_str_buffer(3,1,"Hello",n5110_buffer);
+	
+	n5110_print_buffer(n5110_buffer);
 	
 	
 	
@@ -136,12 +158,17 @@ int main(void)
   {
 		
 
+		/*
+		//Old Display Code
 		n5110_print(0,0,buf,1);
 		HAL_Delay(5000); //Delay of 5s because Simulator
+		toggle_GP(PA,2);
+		*/
+		
+		
 		
 		//DelayMs(50);
-		DelayMs(50);
-		//HAL_Delay(1000);
+		HAL_Delay(1000);
 		
 		/*
 		spi_tx(1,'H');

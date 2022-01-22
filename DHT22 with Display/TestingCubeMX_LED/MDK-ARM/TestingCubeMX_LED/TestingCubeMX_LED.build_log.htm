@@ -27,12 +27,12 @@ Project File Date:  01/21/2022
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'TestingCubeMX_LED'
-compiling n5110_drive.c...
-../Core/Inc/n5110_drive.h(108): warning:  #1-D: last line of file ends without a newline
-  };
-..\Core\Src\n5110_drive.c: 1 warning, 0 errors
+compiling main.c...
+../Core/Src/main.c(123): warning:  #550-D: variable "saitama_pic"  was set but never used
+  	ImgType saitama_pic = {.h = saitama_rows, .w = saitama_cols, .x = 0, .y = 0};
+../Core/Src/main.c: 1 warning, 0 errors
 linking...
-Program Size: Code=11196 RO-data=948 RW-data=32 ZI-data=1704  
+Program Size: Code=11532 RO-data=468 RW-data=1744 ZI-data=1704  
 FromELF: creating hex file...
 "TestingCubeMX_LED\TestingCubeMX_LED.axf" - 0 Error(s), 1 Warning(s).
 
