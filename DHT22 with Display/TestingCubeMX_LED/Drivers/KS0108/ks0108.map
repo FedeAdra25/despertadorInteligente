@@ -1,0 +1,548 @@
+Archive member included because of file (symbol)
+
+C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+                              E:\WORK\uK\STM32\KS0108\KS0108-STM32.o (GPIO_Init)
+C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                              E:\WORK\uK\STM32\KS0108\KS0108-STM32.o (RCC_APB2PeriphClockCmd)
+
+Allocating common symbols
+Common symbol       size              file
+
+GPIO_InitStructure  0x4               E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+
+Discarded input sections
+
+ .text          0x00000000        0x0 C:\Program Files\Raisonance\Ride\lib\ARM\crt0_STM32x.o
+ .data          0x00000000        0x0 C:\Program Files\Raisonance\Ride\lib\ARM\crt0_STM32x.o
+ .bss           0x00000000        0x0 C:\Program Files\Raisonance\Ride\lib\ARM\crt0_STM32x.o
+ .text          0x00000000        0x0 E:\WORK\uK\STM32\KS0108\main.o
+ .data          0x00000000        0x0 E:\WORK\uK\STM32\KS0108\main.o
+ .bss           0x00000000        0x0 E:\WORK\uK\STM32\KS0108\main.o
+ .text          0x00000000        0x0 E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+ .data          0x00000000        0x0 E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+ .bss           0x00000000        0x0 E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+ .text.GLCD_ReadData
+                0x00000000        0x0 E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+ .text          0x00000000        0x0 E:\WORK\uK\STM32\KS0108\graphic.o
+ .data          0x00000000        0x0 E:\WORK\uK\STM32\KS0108\graphic.o
+ .bss           0x00000000        0x0 E:\WORK\uK\STM32\KS0108\graphic.o
+ .text.GLCD_Line
+                0x00000000        0x0 E:\WORK\uK\STM32\KS0108\graphic.o
+ .text.GLCD_Circle
+                0x00000000        0x0 E:\WORK\uK\STM32\KS0108\graphic.o
+ .text.GLCD_Rectangle
+                0x00000000        0x0 E:\WORK\uK\STM32\KS0108\graphic.o
+ .rodata        0x00000000        0x0 E:\WORK\uK\STM32\KS0108\graphic.o
+ .text          0x00000000        0x0 E:\WORK\uK\STM32\KS0108\KS0108.o
+ .data          0x00000000        0x0 E:\WORK\uK\STM32\KS0108\KS0108.o
+ .text.GLCD_Bitmap
+                0x00000000        0x0 E:\WORK\uK\STM32\KS0108\KS0108.o
+ .text.GLCD_SetPixel
+                0x00000000        0x0 E:\WORK\uK\STM32\KS0108\KS0108.o
+ .text.GLCD_TextGoTo
+                0x00000000        0x0 E:\WORK\uK\STM32\KS0108\KS0108.o
+ .text          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .data          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .bss           0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_ReadInputDataBit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_ReadOutputDataBit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_ReadOutputData
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_WriteBit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_PinLockConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_EventOutputConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_EventOutputCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_PinRemapConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_EXTILineConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_AFIODeInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_DeInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .data          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .bss           0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_DeInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_HSEConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_AdjustHSICalibrationValue
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_HSICmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_PLLConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_PLLCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_SYSCLKConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_GetSYSCLKSource
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_HCLKConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_PCLK1Config
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_PCLK2Config
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_ITConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_USBCLKConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_ADCCLKConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_LSEConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_LSICmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_RTCCLKConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_RTCCLKCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_GetClocksFreq
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_AHBPeriphClockCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_APB1PeriphClockCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_APB2PeriphResetCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_APB1PeriphResetCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_BackupResetCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_ClockSecuritySystemCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_MCOConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_GetFlagStatus
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_WaitForHSEStartUp
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_ClearFlag
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_GetITStatus
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_ClearITPendingBit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .rodata        0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x20000000         0x00005000         xrw
+FLASH            0x08000000         0x00008000         xr
+FLASHB1          0x00000000         0x00000000         xr
+EXTMEMB0         0x00000000         0x00000000         xr
+EXTMEMB1         0x00000000         0x00000000         xr
+EXTMEMB2         0x00000000         0x00000000         xr
+EXTMEMB3         0x00000000         0x00000000         xr
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD C:\Program Files\Raisonance\Ride\lib\ARM\crt0_STM32x.o
+LOAD E:\WORK\uK\STM32\KS0108\main.o
+LOAD E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+LOAD E:\WORK\uK\STM32\KS0108\graphic.o
+LOAD E:\WORK\uK\STM32\KS0108\KS0108.o
+LOAD C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib
+                0x00000400                __Stack_Size = 0x400
+                0x00000400                PROVIDE (_Stack_Size, __Stack_Size)
+                0x20004c00                __Stack_Init = (_estack - __Stack_Size)
+                0x20004c00                PROVIDE (_Stack_Init, __Stack_Init)
+                0x00000100                _Minimum_Stack_Size = 0x100
+                0x00000000                PROVIDE (Undefined_Handler, 0x0)
+                0x00000000                PROVIDE (SWI_Handler, 0x0)
+                0x00000000                PROVIDE (IRQ_Handler, 0x0)
+                0x00000000                PROVIDE (Prefetch_Handler, 0x0)
+                0x00000000                PROVIDE (Abort_Handler, 0x0)
+                0x00000000                PROVIDE (FIQ_Handler, 0x0)
+                0x00000000                PROVIDE (NMIException, 0x0)
+                0x00000000                PROVIDE (HardFaultException, 0x0)
+                0x00000000                PROVIDE (MemManageException, 0x0)
+                0x00000000                PROVIDE (BusFaultException, 0x0)
+                0x00000000                PROVIDE (UsageFaultException, 0x0)
+                0x00000000                PROVIDE (SVCHandler, 0x0)
+                0x00000000                PROVIDE (DebugMonitor, 0x0)
+                0x00000000                PROVIDE (PendSVC, 0x0)
+                0x00000000                PROVIDE (SysTickHandler, 0x0)
+                0x00000000                PROVIDE (WWDG_IRQHandler, 0x0)
+                0x00000000                PROVIDE (PVD_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TAMPER_IRQHandler, 0x0)
+                0x00000000                PROVIDE (RTC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (FLASH_IRQHandler, 0x0)
+                0x00000000                PROVIDE (RCC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI0_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI4_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel4_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel5_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel6_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel7_IRQHandler, 0x0)
+                0x00000000                PROVIDE (ADC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USB_HP_CAN_TX_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USB_LP_CAN_RX0_IRQHandler, 0x0)
+                0x00000000                PROVIDE (CAN_RX1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (CAN_SCE_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI9_5_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM1_BRK_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM1_UP_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM1_TRG_COM_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM1_CC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM4_IRQHandler, 0x0)
+                0x00000000                PROVIDE (I2C1_EV_IRQHandler, 0x0)
+                0x00000000                PROVIDE (I2C1_ER_IRQHandler, 0x0)
+                0x00000000                PROVIDE (I2C2_EV_IRQHandler, 0x0)
+                0x00000000                PROVIDE (I2C2_ER_IRQHandler, 0x0)
+                0x00000000                PROVIDE (SPI1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (SPI2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USART1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USART2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USART3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI15_10_IRQHandler, 0x0)
+                0x00000000                PROVIDE (RTCAlarm_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USBWakeUp_IRQHandler, 0x0)
+                0x42000000                PERIPH_BB_BASE = 0x42000000
+                0x22000000                SRAM_BB_BASE = 0x22000000
+                0x20000000                SRAM_BASE = 0x20000000
+                0x40000000                PERIPH_BASE = 0x40000000
+                0x40022000                PROVIDE (FLASH_BASE, 0x40022000)
+                0x1ffff800                PROVIDE (OB_BASE, 0x1ffff800)
+                0x40000000                APB1PERIPH_BASE = PERIPH_BASE
+                0x40010000                APB2PERIPH_BASE = (PERIPH_BASE + 0x10000)
+                0x40020000                AHBPERIPH_BASE = (PERIPH_BASE + 0x20000)
+                0x40000000                PROVIDE (TIM2, (APB1PERIPH_BASE + 0x0))
+                0x40000400                PROVIDE (TIM3, (APB1PERIPH_BASE + 0x400))
+                0x40000800                PROVIDE (TIM4, (APB1PERIPH_BASE + 0x800))
+                0x40002800                PROVIDE (RTC, (APB1PERIPH_BASE + 0x2800))
+                0x40002c00                PROVIDE (WWDG, (APB1PERIPH_BASE + 0x2c00))
+                0x40003000                PROVIDE (IWDG, (APB1PERIPH_BASE + 0x3000))
+                0x40003800                PROVIDE (SPI2, (APB1PERIPH_BASE + 0x3800))
+                0x40004400                PROVIDE (USART2, (APB1PERIPH_BASE + 0x4400))
+                0x40004800                PROVIDE (USART3, (APB1PERIPH_BASE + 0x4800))
+                0x40005400                PROVIDE (I2C1, (APB1PERIPH_BASE + 0x5400))
+                0x40005800                PROVIDE (I2C2, (APB1PERIPH_BASE + 0x5800))
+                0x40006400                PROVIDE (CAN, (APB1PERIPH_BASE + 0x6400))
+                0x40006c00                PROVIDE (BKP, (APB1PERIPH_BASE + 0x6c00))
+                0x40007000                PROVIDE (PWR, (APB1PERIPH_BASE + 0x7000))
+                0x40010000                PROVIDE (AFIO, (APB2PERIPH_BASE + 0x0))
+                0x40010400                PROVIDE (EXTI, (APB2PERIPH_BASE + 0x400))
+                0x40010800                PROVIDE (GPIOA, (APB2PERIPH_BASE + 0x800))
+                0x40010c00                PROVIDE (GPIOB, (APB2PERIPH_BASE + 0xc00))
+                0x40011000                PROVIDE (GPIOC, (APB2PERIPH_BASE + 0x1000))
+                0x40011400                PROVIDE (GPIOD, (APB2PERIPH_BASE + 0x1400))
+                0x40011800                PROVIDE (GPIOE, (APB2PERIPH_BASE + 0x1800))
+                0x40012400                PROVIDE (ADC1, (APB2PERIPH_BASE + 0x2400))
+                0x40012800                PROVIDE (ADC2, (APB2PERIPH_BASE + 0x2800))
+                0x40012c00                PROVIDE (TIM1, (APB2PERIPH_BASE + 0x2c00))
+                0x40013000                PROVIDE (SPI1, (APB2PERIPH_BASE + 0x3000))
+                0x40013800                PROVIDE (USART1, (APB2PERIPH_BASE + 0x3800))
+                0x40020000                PROVIDE (DMA, (AHBPERIPH_BASE + 0x0))
+                0x40020008                PROVIDE (DMA_Channel1, (AHBPERIPH_BASE + 0x8))
+                0x4002001c                PROVIDE (DMA_Channel2, (AHBPERIPH_BASE + 0x1c))
+                0x40020030                PROVIDE (DMA_Channel3, (AHBPERIPH_BASE + 0x30))
+                0x40020044                PROVIDE (DMA_Channel4, (AHBPERIPH_BASE + 0x44))
+                0x40020058                PROVIDE (DMA_Channel5, (AHBPERIPH_BASE + 0x58))
+                0x4002006c                PROVIDE (DMA_Channel6, (AHBPERIPH_BASE + 0x6c))
+                0x40020080                PROVIDE (DMA_Channel7, (AHBPERIPH_BASE + 0x80))
+                0x40021000                PROVIDE (RCC, (AHBPERIPH_BASE + 0x1000))
+                0xe000e000                SCS_BASE = 0xe000e000
+                0xe000e010                PROVIDE (SysTick, (SCS_BASE + 0x10))
+                0xe000e100                PROVIDE (NVIC, (SCS_BASE + 0x100))
+                0xe000ed00                PROVIDE (SCB, (SCS_BASE + 0xd00))
+                0x20005000                _estack = 0x20005000
+
+.isr_vector     0x08000000      0x10c
+                0x08000000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x08000000      0x10c C:\Program Files\Raisonance\Ride\lib\ARM\crt0_STM32x.o
+                0x08000000                g_pfnVectors
+                0x0800010c                . = ALIGN (0x4)
+
+.flashtext      0x0800010c        0x0
+                0x0800010c                . = ALIGN (0x4)
+ *(.flashtext)
+                0x0800010c                . = ALIGN (0x4)
+
+.text           0x0800010c      0x7b4
+                0x0800010c                . = ALIGN (0x4)
+ *(.text)
+ *(.text.*)
+ .text.Reset_Handler
+                0x0800010c       0x60 C:\Program Files\Raisonance\Ride\lib\ARM\crt0_STM32x.o
+                0x0800010c                Reset_Handler
+ .text.main     0x0800016c       0x98 E:\WORK\uK\STM32\KS0108\main.o
+                0x0800016c                main
+ .text.GLCD_Delay
+                0x08000204        0xc E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+                0x08000204                GLCD_Delay
+ .text.GLCD_ReadByteFromROMMemory
+                0x08000210        0x4 E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+                0x08000210                GLCD_ReadByteFromROMMemory
+ .text.GLCD_InitializePorts
+                0x08000214       0x40 E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+                0x08000214                GLCD_InitializePorts
+ .text.GLCD_EnableController
+                0x08000254       0x30 E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+                0x08000254                GLCD_EnableController
+ .text.GLCD_DisableController
+                0x08000284       0x30 E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+                0x08000284                GLCD_DisableController
+ .text.GLCD_ReadStatus
+                0x080002b4       0x70 E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+                0x080002b4                GLCD_ReadStatus
+ .text.GLCD_WriteData
+                0x08000324       0xa4 E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+                0x08000324                GLCD_WriteData
+ .text.GLCD_WriteCommand
+                0x080003c8       0x88 E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+                0x080003c8                GLCD_WriteCommand
+ .text.GLCD_WriteChar
+                0x08000450       0x34 E:\WORK\uK\STM32\KS0108\KS0108.o
+                0x08000450                GLCD_WriteChar
+ .text.GLCD_WriteString
+                0x08000484       0x18 E:\WORK\uK\STM32\KS0108\KS0108.o
+                0x08000484                GLCD_WriteString
+ .text.GLCD_GoTo
+                0x0800049c       0x54 E:\WORK\uK\STM32\KS0108\KS0108.o
+                0x0800049c                GLCD_GoTo
+ .text.GLCD_ClearScreen
+                0x080004f0       0x24 E:\WORK\uK\STM32\KS0108\KS0108.o
+                0x080004f0                GLCD_ClearScreen
+ .text.GLCD_Initialize
+                0x08000514       0x18 E:\WORK\uK\STM32\KS0108\KS0108.o
+                0x08000514                GLCD_Initialize
+ .text.GPIO_Init
+                0x0800052c       0xcc C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+                0x0800052c                GPIO_Init
+ .text.GPIO_StructInit
+                0x080005f8       0x14 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+                0x080005f8                GPIO_StructInit
+ .text.GPIO_ReadInputData
+                0x0800060c        0x8 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+                0x0800060c                GPIO_ReadInputData
+ .text.GPIO_SetBits
+                0x08000614        0x4 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+                0x08000614                GPIO_SetBits
+ .text.GPIO_ResetBits
+                0x08000618        0x4 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+                0x08000618                GPIO_ResetBits
+ .text.GPIO_Write
+                0x0800061c        0x4 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+                0x0800061c                GPIO_Write
+ .text.RCC_APB2PeriphClockCmd
+                0x08000620       0x24 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x08000620                RCC_APB2PeriphClockCmd
+ *(.rodata)
+ .rodata        0x08000644      0x1e0 E:\WORK\uK\STM32\KS0108\KS0108.o
+ *(.rodata*)
+ .rodata.str1.1
+                0x08000824       0x9a E:\WORK\uK\STM32\KS0108\main.o
+ *(.glue_7)
+ *fill*         0x080008be        0x2 00
+ .glue_7        0x080008c0        0x0 C:\Program Files\Raisonance\Ride\lib\ARM\crt0_STM32x.o
+ .glue_7        0x080008c0        0x0 E:\WORK\uK\STM32\KS0108\main.o
+ .glue_7        0x080008c0        0x0 E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+ .glue_7        0x080008c0        0x0 E:\WORK\uK\STM32\KS0108\graphic.o
+ .glue_7        0x080008c0        0x0 E:\WORK\uK\STM32\KS0108\KS0108.o
+ .glue_7        0x080008c0        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .glue_7        0x080008c0        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ *(.glue_7t)
+ .glue_7t       0x080008c0        0x0 C:\Program Files\Raisonance\Ride\lib\ARM\crt0_STM32x.o
+ .glue_7t       0x080008c0        0x0 E:\WORK\uK\STM32\KS0108\main.o
+ .glue_7t       0x080008c0        0x0 E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+ .glue_7t       0x080008c0        0x0 E:\WORK\uK\STM32\KS0108\graphic.o
+ .glue_7t       0x080008c0        0x0 E:\WORK\uK\STM32\KS0108\KS0108.o
+ .glue_7t       0x080008c0        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .glue_7t       0x080008c0        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x080008c0                . = ALIGN (0x4)
+                0x080008c0                _etext = .
+                0x080008c0                _sidata = _etext
+
+.vfp11_veneer   0x20000000        0x0
+ .vfp11_veneer  0x20000000        0x0 C:\Program Files\Raisonance\Ride\lib\ARM\crt0_STM32x.o
+ .vfp11_veneer  0x20000000        0x0 E:\WORK\uK\STM32\KS0108\main.o
+ .vfp11_veneer  0x20000000        0x0 E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+ .vfp11_veneer  0x20000000        0x0 E:\WORK\uK\STM32\KS0108\graphic.o
+ .vfp11_veneer  0x20000000        0x0 E:\WORK\uK\STM32\KS0108\KS0108.o
+ .vfp11_veneer  0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .vfp11_veneer  0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+
+.data           0x20000000        0x0 load address 0x080008c0
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                _sdata = .
+ *(.data)
+ *(.data.*)
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                _edata = .
+
+.bss            0x20000000        0x8
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                _sbss = .
+ *(.bss)
+ .bss           0x20000000        0x2 E:\WORK\uK\STM32\KS0108\KS0108.o
+                0x20000000                screen_x
+                0x20000001                screen_y
+ *(COMMON)
+ COMMON         0x20000002        0x4 E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+                0x20000002                GPIO_InitStructure
+                0x20000008                . = ALIGN (0x4)
+ *fill*         0x20000006        0x2 00
+                0x20000008                _ebss = .
+                0x20000008                PROVIDE (end, _ebss)
+                0x20000008                PROVIDE (_end, _ebss)
+
+._usrstack      0x20000008      0x100
+                0x20000008                . = ALIGN (0x4)
+                0x20000008                _susrstack = .
+                0x20000108                . = (. + _Minimum_Stack_Size)
+ *fill*         0x20000008      0x100 00
+                0x20000108                . = ALIGN (0x4)
+                0x20000108                _eusrstack = .
+
+.b1text
+ *(.b1text)
+ *(.b1rodata)
+ *(.b1rodata*)
+
+.eb0text
+ *(.eb0text)
+ *(.eb0rodata)
+ *(.eb0rodata*)
+
+.eb1text
+ *(.eb1text)
+ *(.eb1rodata)
+ *(.eb1rodata*)
+
+.eb2text
+ *(.eb2text)
+ *(.eb2rodata)
+ *(.eb2rodata*)
+
+.eb3text
+ *(.eb3text)
+ *(.eb3rodata)
+ *(.eb3rodata*)
+                0x20000108                __exidx_start = .
+                0x20000108                __exidx_end = .
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000      0x1c3
+ *(.comment)
+ .comment       0x00000000       0x4d C:\Program Files\Raisonance\Ride\lib\ARM\crt0_STM32x.o
+ .comment       0x0000004d       0x37 E:\WORK\uK\STM32\KS0108\main.o
+ .comment       0x00000084       0x37 E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+ .comment       0x000000bb       0x37 E:\WORK\uK\STM32\KS0108\graphic.o
+ .comment       0x000000f2       0x37 E:\WORK\uK\STM32\KS0108\KS0108.o
+ .comment       0x00000129       0x4d C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .comment       0x00000176       0x4d C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+START GROUP
+LOAD c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.2.1/thumb2\libgcc.a
+LOAD c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.2.1/../../../../arm-none-eabi/lib/thumb2\libc.a
+END GROUP
+OUTPUT(E:\WORK\uK\STM32\KS0108\ks0108.elf elf32-littlearm)
+
+.ARM.attributes
+                0x00000000       0x31
+ .ARM.attributes
+                0x00000000       0x31 C:\Program Files\Raisonance\Ride\lib\ARM\crt0_STM32x.o
+ .ARM.attributes
+                0x00000031       0x31 E:\WORK\uK\STM32\KS0108\main.o
+ .ARM.attributes
+                0x00000062       0x31 E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+ .ARM.attributes
+                0x00000093       0x31 E:\WORK\uK\STM32\KS0108\graphic.o
+ .ARM.attributes
+                0x000000c4       0x31 E:\WORK\uK\STM32\KS0108\KS0108.o
+ .ARM.attributes
+                0x000000f5       0x31 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .ARM.attributes
+                0x00000126       0x31 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)

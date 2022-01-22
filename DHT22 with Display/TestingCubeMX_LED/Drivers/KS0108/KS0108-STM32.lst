@@ -1,0 +1,293 @@
+
+E:\WORK\uK\STM32\KS0108\KS0108-STM32.o:     file format elf32-littlearm
+E:\WORK\uK\STM32\KS0108\KS0108-STM32.o
+
+Disassembly of section .text.GLCD_Delay:
+
+00000000 <GLCD_Delay>:
+GLCD_Delay():
+   0:	bf00      	nop
+   2:	bf00      	nop
+   4:	bf00      	nop
+   6:	bf00      	nop
+   8:	4770      	bx	lr
+   a:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.GLCD_ReadByteFromROMMemory:
+
+00000000 <GLCD_ReadByteFromROMMemory>:
+GLCD_ReadByteFromROMMemory():
+   0:	7800      	ldrb	r0, [r0, #0]
+   2:	4770      	bx	lr
+Disassembly of section .text.GLCD_InitializePorts:
+
+00000000 <GLCD_InitializePorts>:
+GLCD_InitializePorts():
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4c0d      	ldr	r4, [pc, #52]	(38 <GLCD_InitializePorts+0x38>)
+   4:	2101      	movs	r1, #1
+   6:	2040      	movs	r0, #64
+   8:	f7ff fffe 	bl	0 <RCC_APB2PeriphClockCmd>
+   c:	4620      	mov	r0, r4
+   e:	f7ff fffe 	bl	0 <GPIO_StructInit>
+  12:	4d0a      	ldr	r5, [pc, #40]	(3c <GLCD_InitializePorts+0x3c>)
+  14:	f04f 33ff 	mov.w	r3, #4294967295	; 0xffffffff
+  18:	8023      	strh	r3, [r4, #0]
+  1a:	2302      	movs	r3, #2
+  1c:	70a3      	strb	r3, [r4, #2]
+  1e:	4628      	mov	r0, r5
+  20:	330e      	adds	r3, #14
+  22:	4621      	mov	r1, r4
+  24:	70e3      	strb	r3, [r4, #3]
+  26:	f7ff fffe 	bl	0 <GPIO_Init>
+  2a:	4628      	mov	r0, r5
+  2c:	f643 31ff 	movw	r1, #15359	; 0x3bff
+  30:	f7ff fffe 	bl	0 <GPIO_Write>
+  34:	bd70      	pop	{r4, r5, r6, pc}
+  36:	46c0      	nop			(mov r8, r8)
+  38:	00000000 	.word	0x00000000
+  3c:	40011800 	.word	0x40011800
+Disassembly of section .text.GLCD_EnableController:
+
+00000000 <GLCD_EnableController>:
+GLCD_EnableController():
+   0:	2801      	cmp	r0, #1
+   2:	b510      	push	{r4, lr}
+   4:	d007      	beq.n	16 <GLCD_EnableController+0x16>
+   6:	d302      	bcc.n	e <GLCD_EnableController+0xe>
+   8:	2802      	cmp	r0, #2
+   a:	d008      	beq.n	1e <GLCD_EnableController+0x1e>
+   c:	e00c      	b.n	28 <GLCD_EnableController+0x28>
+   e:	4807      	ldr	r0, [pc, #28]	(2c <GLCD_EnableController+0x2c>)
+  10:	f44f 6100 	mov.w	r1, #2048	; 0x800
+  14:	e006      	b.n	24 <GLCD_EnableController+0x24>
+  16:	4805      	ldr	r0, [pc, #20]	(2c <GLCD_EnableController+0x2c>)
+  18:	f44f 5180 	mov.w	r1, #4096	; 0x1000
+  1c:	e002      	b.n	24 <GLCD_EnableController+0x24>
+  1e:	4803      	ldr	r0, [pc, #12]	(2c <GLCD_EnableController+0x2c>)
+  20:	f44f 5100 	mov.w	r1, #8192	; 0x2000
+  24:	f7ff fffe 	bl	0 <GPIO_ResetBits>
+  28:	bd10      	pop	{r4, pc}
+  2a:	46c0      	nop			(mov r8, r8)
+  2c:	40011800 	.word	0x40011800
+Disassembly of section .text.GLCD_DisableController:
+
+00000000 <GLCD_DisableController>:
+GLCD_DisableController():
+   0:	2801      	cmp	r0, #1
+   2:	b510      	push	{r4, lr}
+   4:	d007      	beq.n	16 <GLCD_DisableController+0x16>
+   6:	d302      	bcc.n	e <GLCD_DisableController+0xe>
+   8:	2802      	cmp	r0, #2
+   a:	d008      	beq.n	1e <GLCD_DisableController+0x1e>
+   c:	e00c      	b.n	28 <GLCD_DisableController+0x28>
+   e:	4807      	ldr	r0, [pc, #28]	(2c <GLCD_DisableController+0x2c>)
+  10:	f44f 6100 	mov.w	r1, #2048	; 0x800
+  14:	e006      	b.n	24 <GLCD_DisableController+0x24>
+  16:	4805      	ldr	r0, [pc, #20]	(2c <GLCD_DisableController+0x2c>)
+  18:	f44f 5180 	mov.w	r1, #4096	; 0x1000
+  1c:	e002      	b.n	24 <GLCD_DisableController+0x24>
+  1e:	4803      	ldr	r0, [pc, #12]	(2c <GLCD_DisableController+0x2c>)
+  20:	f44f 5100 	mov.w	r1, #8192	; 0x2000
+  24:	f7ff fffe 	bl	0 <GPIO_SetBits>
+  28:	bd10      	pop	{r4, pc}
+  2a:	46c0      	nop			(mov r8, r8)
+  2c:	40011800 	.word	0x40011800
+Disassembly of section .text.GLCD_ReadStatus:
+
+00000000 <GLCD_ReadStatus>:
+GLCD_ReadStatus():
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4c19      	ldr	r4, [pc, #100]	(68 <GLCD_ReadStatus+0x68>)
+   4:	4606      	mov	r6, r0
+   6:	4620      	mov	r0, r4
+   8:	f7ff fffe 	bl	0 <GPIO_StructInit>
+   c:	4d17      	ldr	r5, [pc, #92]	(6c <GLCD_ReadStatus+0x6c>)
+   e:	f04f 03ff 	mov.w	r3, #255	; 0xff
+  12:	8023      	strh	r3, [r4, #0]
+  14:	2348      	movs	r3, #72
+  16:	70e3      	strb	r3, [r4, #3]
+  18:	4628      	mov	r0, r5
+  1a:	4621      	mov	r1, r4
+  1c:	f7ff fffe 	bl	0 <GPIO_Init>
+  20:	4628      	mov	r0, r5
+  22:	f44f 7100 	mov.w	r1, #512	; 0x200
+  26:	f7ff fffe 	bl	0 <GPIO_SetBits>
+  2a:	f44f 7180 	mov.w	r1, #256	; 0x100
+  2e:	4628      	mov	r0, r5
+  30:	f7ff fffe 	bl	0 <GPIO_ResetBits>
+  34:	4630      	mov	r0, r6
+  36:	f7ff fffe 	bl	0 <GLCD_ReadStatus>
+  3a:	f7ff fffe 	bl	0 <GLCD_ReadStatus>
+  3e:	4628      	mov	r0, r5
+  40:	f44f 6180 	mov.w	r1, #1024	; 0x400
+  44:	f7ff fffe 	bl	0 <GPIO_SetBits>
+  48:	f7ff fffe 	bl	0 <GLCD_ReadStatus>
+  4c:	4628      	mov	r0, r5
+  4e:	f7ff fffe 	bl	0 <GPIO_ReadInputData>
+  52:	f44f 6180 	mov.w	r1, #1024	; 0x400
+  56:	4604      	mov	r4, r0
+  58:	4628      	mov	r0, r5
+  5a:	f7ff fffe 	bl	0 <GPIO_ResetBits>
+  5e:	4630      	mov	r0, r6
+  60:	f7ff fffe 	bl	0 <GLCD_ReadStatus>
+  64:	b2e0      	uxtb	r0, r4
+  66:	bd70      	pop	{r4, r5, r6, pc}
+  68:	00000000 	.word	0x00000000
+  6c:	40011800 	.word	0x40011800
+Disassembly of section .text.GLCD_WriteData:
+
+00000000 <GLCD_WriteData>:
+GLCD_WriteData():
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4606      	mov	r6, r0
+   4:	4d24      	ldr	r5, [pc, #144]	(98 <GLCD_WriteData+0x98>)
+   6:	7828      	ldrb	r0, [r5, #0]
+   8:	0980      	lsrs	r0, r0, #6
+   a:	f7ff fffe 	bl	0 <GLCD_WriteData>
+   e:	f010 0f80 	tst.w	r0, #128	; 0x80
+  12:	d1f7      	bne.n	4 <GLCD_WriteData+0x4>
+  14:	4c21      	ldr	r4, [pc, #132]	(9c <GLCD_WriteData+0x9c>)
+  16:	4620      	mov	r0, r4
+  18:	f7ff fffe 	bl	0 <GPIO_StructInit>
+  1c:	f04f 03ff 	mov.w	r3, #255	; 0xff
+  20:	8023      	strh	r3, [r4, #0]
+  22:	481f      	ldr	r0, [pc, #124]	(a0 <GLCD_WriteData+0xa0>)
+  24:	2310      	movs	r3, #16
+  26:	4621      	mov	r1, r4
+  28:	70e3      	strb	r3, [r4, #3]
+  2a:	f7ff fffe 	bl	0 <GPIO_Init>
+  2e:	481c      	ldr	r0, [pc, #112]	(a0 <GLCD_WriteData+0xa0>)
+  30:	f44f 7100 	mov.w	r1, #512	; 0x200
+  34:	f7ff fffe 	bl	0 <GPIO_ResetBits>
+  38:	f7ff fffe 	bl	0 <GLCD_WriteData>
+  3c:	4818      	ldr	r0, [pc, #96]	(a0 <GLCD_WriteData+0xa0>)
+  3e:	f44f 7180 	mov.w	r1, #256	; 0x100
+  42:	f7ff fffe 	bl	0 <GPIO_SetBits>
+  46:	f7ff fffe 	bl	0 <GLCD_WriteData>
+  4a:	4815      	ldr	r0, [pc, #84]	(a0 <GLCD_WriteData+0xa0>)
+  4c:	4631      	mov	r1, r6
+  4e:	f7ff fffe 	bl	0 <GPIO_SetBits>
+  52:	43f1      	mvns	r1, r6
+  54:	b2c9      	uxtb	r1, r1
+  56:	4812      	ldr	r0, [pc, #72]	(a0 <GLCD_WriteData+0xa0>)
+  58:	f7ff fffe 	bl	0 <GPIO_ResetBits>
+  5c:	f7ff fffe 	bl	0 <GLCD_WriteData>
+  60:	7828      	ldrb	r0, [r5, #0]
+  62:	0980      	lsrs	r0, r0, #6
+  64:	f7ff fffe 	bl	0 <GLCD_WriteData>
+  68:	f7ff fffe 	bl	0 <GLCD_WriteData>
+  6c:	480c      	ldr	r0, [pc, #48]	(a0 <GLCD_WriteData+0xa0>)
+  6e:	f44f 6180 	mov.w	r1, #1024	; 0x400
+  72:	f7ff fffe 	bl	0 <GPIO_SetBits>
+  76:	f7ff fffe 	bl	0 <GLCD_WriteData>
+  7a:	4809      	ldr	r0, [pc, #36]	(a0 <GLCD_WriteData+0xa0>)
+  7c:	f44f 6180 	mov.w	r1, #1024	; 0x400
+  80:	f7ff fffe 	bl	0 <GPIO_ResetBits>
+  84:	f7ff fffe 	bl	0 <GLCD_WriteData>
+  88:	7828      	ldrb	r0, [r5, #0]
+  8a:	0980      	lsrs	r0, r0, #6
+  8c:	f7ff fffe 	bl	0 <GLCD_WriteData>
+  90:	782b      	ldrb	r3, [r5, #0]
+  92:	3301      	adds	r3, #1
+  94:	702b      	strb	r3, [r5, #0]
+  96:	bd70      	pop	{r4, r5, r6, pc}
+	...
+  a0:	40011800 	.word	0x40011800
+Disassembly of section .text.GLCD_ReadData:
+
+00000000 <GLCD_ReadData>:
+GLCD_ReadData():
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4d1c      	ldr	r5, [pc, #112]	(74 <GLCD_ReadData+0x74>)
+   4:	7828      	ldrb	r0, [r5, #0]
+   6:	0980      	lsrs	r0, r0, #6
+   8:	f7ff fffe 	bl	0 <GLCD_ReadData>
+   c:	f010 0f80 	tst.w	r0, #128	; 0x80
+  10:	d1f7      	bne.n	2 <GLCD_ReadData+0x2>
+  12:	4c19      	ldr	r4, [pc, #100]	(78 <GLCD_ReadData+0x78>)
+  14:	4620      	mov	r0, r4
+  16:	f7ff fffe 	bl	0 <GPIO_StructInit>
+  1a:	f04f 03ff 	mov.w	r3, #255	; 0xff
+  1e:	8023      	strh	r3, [r4, #0]
+  20:	2348      	movs	r3, #72
+  22:	70e3      	strb	r3, [r4, #3]
+  24:	4621      	mov	r1, r4
+  26:	4815      	ldr	r0, [pc, #84]	(7c <GLCD_ReadData+0x7c>)
+  28:	f7ff fffe 	bl	0 <GPIO_Init>
+  2c:	f44f 7140 	mov.w	r1, #768	; 0x300
+  30:	4812      	ldr	r0, [pc, #72]	(4c <GPIO_SetBits+0x4c>)
+  32:	f7ff fffe 	bl	0 <GPIO_SetBits>
+  36:	7828      	ldrb	r0, [r5, #0]
+  38:	0980      	lsrs	r0, r0, #6
+  3a:	f7ff fffe 	bl	0 <GLCD_ReadData>
+  3e:	f7ff fffe 	bl	0 <GLCD_ReadData>
+  42:	f44f 6180 	mov.w	r1, #1024	; 0x400
+  46:	480d      	ldr	r0, [pc, #52]	(38 <GPIO_SetBits+0x38>)
+  48:	f7ff fffe 	bl	0 <GPIO_SetBits>
+  4c:	f7ff fffe 	bl	0 <GLCD_ReadData>
+  50:	480a      	ldr	r0, [pc, #40]	(2c <GPIO_ReadInputData+0x2c>)
+  52:	f7ff fffe 	bl	0 <GPIO_ReadInputData>
+  56:	f44f 6180 	mov.w	r1, #1024	; 0x400
+  5a:	4604      	mov	r4, r0
+  5c:	4807      	ldr	r0, [pc, #28]	(7c <GLCD_ReadData+0x7c>)
+  5e:	f7ff fffe 	bl	0 <GPIO_ResetBits>
+  62:	7828      	ldrb	r0, [r5, #0]
+  64:	0980      	lsrs	r0, r0, #6
+  66:	f7ff fffe 	bl	0 <GLCD_ReadData>
+  6a:	782b      	ldrb	r3, [r5, #0]
+  6c:	b2e0      	uxtb	r0, r4
+  6e:	3301      	adds	r3, #1
+  70:	702b      	strb	r3, [r5, #0]
+  72:	bd70      	pop	{r4, r5, r6, pc}
+	...
+  7c:	40011800 	.word	0x40011800
+Disassembly of section .text.GLCD_WriteCommand:
+
+00000000 <GLCD_WriteCommand>:
+GLCD_WriteCommand():
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4606      	mov	r6, r0
+   4:	460d      	mov	r5, r1
+   6:	4628      	mov	r0, r5
+   8:	f7ff fffe 	bl	0 <GLCD_WriteCommand>
+   c:	f010 0f80 	tst.w	r0, #128	; 0x80
+  10:	d1f9      	bne.n	6 <GLCD_WriteCommand+0x6>
+  12:	4c1b      	ldr	r4, [pc, #108]	(80 <GLCD_WriteCommand+0x80>)
+  14:	4620      	mov	r0, r4
+  16:	f7ff fffe 	bl	0 <GPIO_StructInit>
+  1a:	f04f 03ff 	mov.w	r3, #255	; 0xff
+  1e:	8023      	strh	r3, [r4, #0]
+  20:	4621      	mov	r1, r4
+  22:	2310      	movs	r3, #16
+  24:	4817      	ldr	r0, [pc, #92]	(84 <GLCD_WriteCommand+0x84>)
+  26:	70e3      	strb	r3, [r4, #3]
+  28:	f7ff fffe 	bl	0 <GPIO_Init>
+  2c:	f44f 7140 	mov.w	r1, #768	; 0x300
+  30:	4814      	ldr	r0, [pc, #80]	(54 <GPIO_ResetBits+0x54>)
+  32:	f7ff fffe 	bl	0 <GPIO_ResetBits>
+  36:	f7ff fffe 	bl	0 <GLCD_WriteCommand>
+  3a:	4628      	mov	r0, r5
+  3c:	f7ff fffe 	bl	0 <GLCD_WriteCommand>
+  40:	f7ff fffe 	bl	0 <GLCD_WriteCommand>
+  44:	4631      	mov	r1, r6
+  46:	480f      	ldr	r0, [pc, #60]	(84 <GLCD_WriteCommand+0x84>)
+  48:	f7ff fffe 	bl	0 <GPIO_SetBits>
+  4c:	43f1      	mvns	r1, r6
+  4e:	480d      	ldr	r0, [pc, #52]	(84 <GLCD_WriteCommand+0x84>)
+  50:	b2c9      	uxtb	r1, r1
+  52:	f7ff fffe 	bl	0 <GPIO_ResetBits>
+  56:	f7ff fffe 	bl	0 <GLCD_WriteCommand>
+  5a:	480a      	ldr	r0, [pc, #40]	(84 <GLCD_WriteCommand+0x84>)
+  5c:	f44f 6180 	mov.w	r1, #1024	; 0x400
+  60:	f7ff fffe 	bl	0 <GPIO_SetBits>
+  64:	f7ff fffe 	bl	0 <GLCD_WriteCommand>
+  68:	4806      	ldr	r0, [pc, #24]	(84 <GLCD_WriteCommand+0x84>)
+  6a:	f44f 6180 	mov.w	r1, #1024	; 0x400
+  6e:	f7ff fffe 	bl	0 <GPIO_ResetBits>
+  72:	f7ff fffe 	bl	0 <GLCD_WriteCommand>
+  76:	4628      	mov	r0, r5
+  78:	f7ff fffe 	bl	0 <GLCD_WriteCommand>
+  7c:	bd70      	pop	{r4, r5, r6, pc}
+  7e:	46c0      	nop			(mov r8, r8)
+  80:	00000000 	.word	0x00000000
+  84:	40011800 	.word	0x40011800
