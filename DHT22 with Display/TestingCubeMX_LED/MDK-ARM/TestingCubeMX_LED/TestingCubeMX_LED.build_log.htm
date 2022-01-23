@@ -27,16 +27,22 @@ Project File Date:  01/21/2022
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'TestingCubeMX_LED'
+compiling n5110_drive.c...
+../Core/Inc/n5110_drive.h(255): warning:  #1-D: last line of file ends without a newline
+  };
+..\Core\Src\n5110_drive.c(203): warning:  #1-D: last line of file ends without a newline
+  }
+..\Core\Src\n5110_drive.c: 2 warnings, 0 errors
 compiling main.c...
-../Core/Inc/n5110_drive.h(242): warning:  #1-D: last line of file ends without a newline
+../Core/Inc/n5110_drive.h(255): warning:  #1-D: last line of file ends without a newline
   };
 ../Core/Src/main.c(105): warning:  #177-D: variable "dayCounter"  was declared but never referenced
   	int dayCounter = 0;
 ../Core/Src/main.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=11824 RO-data=948 RW-data=4068 ZI-data=1700  
+Program Size: Code=11728 RO-data=948 RW-data=4576 ZI-data=1704  
 FromELF: creating hex file...
-"TestingCubeMX_LED\TestingCubeMX_LED.axf" - 0 Error(s), 2 Warning(s).
+"TestingCubeMX_LED\TestingCubeMX_LED.axf" - 0 Error(s), 4 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -60,7 +66,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.5.0
       Include file:  CMSIS\Core\Include\tz_context.h
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

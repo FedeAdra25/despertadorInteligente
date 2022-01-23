@@ -3,9 +3,9 @@
 <title>Static Call Graph - [TestingCubeMX_LED\TestingCubeMX_LED.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image TestingCubeMX_LED\TestingCubeMX_LED.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sun Jan 23 20:15:54 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sun Jan 23 20:49:26 2022
 <BR><P>
-<H3>Maximum Stack Usage =        800 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        968 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 __rt_entry_main &rArr; main &rArr; SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority
 <P>
@@ -226,7 +226,7 @@ Global Symbols
 <P><STRONG><a name="[ce]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[4c]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 800 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 968 + Unknown Stack Size
 <LI>Call Chain = __rt_entry_main &rArr; main &rArr; SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -406,7 +406,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
 </UL>
 
-<P><STRONG><a name="[9d]"></a>strlen</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, strlen.o(.text))
+<P><STRONG><a name="[9e]"></a>strlen</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, strlen.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strlen
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -878,7 +878,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_pos
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_tx
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_init
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_print_buffer
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_print_buffer
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_init
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_clear
 </UL>
@@ -898,14 +898,14 @@ Global Symbols
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_init
 </UL>
 
-<P><STRONG><a name="[4d]"></a>main</STRONG> (Thumb, 564 bytes, Stack size 664 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 800 + Unknown Stack Size
+<P><STRONG><a name="[4d]"></a>main</STRONG> (Thumb, 466 bytes, Stack size 832 bytes, main.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 968 + Unknown Stack Size
 <LI>Call Chain = main &rArr; SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_init
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_update_str_buffer
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_update_str_buffer
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_update_buffer
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_print_buffer
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_print_buffer
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_init
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_clear_buffer
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_clear
@@ -918,10 +918,10 @@ Global Symbols
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DHT22_Init
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DHT22_GetTemp_Humidity
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
@@ -934,7 +934,7 @@ Global Symbols
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_tx
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W_GP
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_print_buffer
+<BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_print_buffer
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -961,11 +961,11 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_tx
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W_GP
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_print_buffer
+<BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_print_buffer
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_clear
 </UL>
 
-<P><STRONG><a name="[9f]"></a>n5110_print_buffer</STRONG> (Thumb, 78 bytes, Stack size 24 bytes, n5110_drive.o(i.n5110_print_buffer))
+<P><STRONG><a name="[9c]"></a>n5110_print_buffer</STRONG> (Thumb, 78 bytes, Stack size 24 bytes, n5110_drive.o(i.n5110_print_buffer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = n5110_print_buffer &rArr; n5110_clear &rArr; n5110_pos &rArr; spi_tx
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_pos
@@ -982,7 +982,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[9e]"></a>n5110_update_str_buffer</STRONG> (Thumb, 92 bytes, Stack size 20 bytes, n5110_drive.o(i.n5110_update_str_buffer))
+<P><STRONG><a name="[9f]"></a>n5110_update_str_buffer</STRONG> (Thumb, 92 bytes, Stack size 20 bytes, n5110_drive.o(i.n5110_update_str_buffer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = n5110_update_str_buffer
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -1003,7 +1003,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W_GP
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_pos
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_print_buffer
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_print_buffer
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_init
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;n5110_clear
 </UL>
@@ -1020,7 +1020,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_f2d
 </UL>
 
-<P><STRONG><a name="[9c]"></a>__aeabi_f2d</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, f2d.o(x$fpl$f2d))
+<P><STRONG><a name="[9d]"></a>__aeabi_f2d</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, f2d.o(x$fpl$f2d))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_f2d
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main

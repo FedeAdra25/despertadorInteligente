@@ -141,11 +141,21 @@ int main(void)
 	display_pic.image[6] = display_sabado;
 	display_pic.image[7] = display_domingo;
 	
+	/*Welcome Screen */
+	ImgType welcome_pic = {.h = welcome_screen_rows, .w = welcome_screen_cols, .x = 0, .y = 0};
+	welcome_pic.image[0] = welcome_screen;
+	
 	
 	
 	
 	n5110_clear();
 	n5110_clear_buffer(n5110_buffer);
+	
+	/* Welcome Screen 5 seconds delay */
+	n5110_update_buffer(welcome_pic, 0, n5110_buffer);
+	HAL_Delay(1000);
+	n5110_print_buffer(n5110_buffer);
+	HAL_Delay(5000);
 	
 	n5110_update_buffer(display_pic, 0, n5110_buffer);
 	/* MEMO: Con el update str buffer podes agregar una string 
@@ -190,18 +200,7 @@ int main(void)
 		
 		
 		//DelayMs(50);
-		HAL_Delay(2000);
-		n5110_update_buffer(display_pic, 1, n5110_buffer);
-		n5110_print_buffer(n5110_buffer);
-		HAL_Delay(2000);
-		n5110_update_buffer(display_pic, 2, n5110_buffer);
-		n5110_print_buffer(n5110_buffer);
-		HAL_Delay(2000);
-		n5110_update_buffer(display_pic, 3, n5110_buffer);
-		n5110_print_buffer(n5110_buffer);
-		HAL_Delay(2000);
-		n5110_update_buffer(display_pic, 4, n5110_buffer);
-		n5110_print_buffer(n5110_buffer);
+		HAL_Delay(1000);
 		
 		/*
 		spi_tx(1,'H');
