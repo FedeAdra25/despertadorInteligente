@@ -102,6 +102,7 @@ int main(void)
 	char buf[50];
 	char onMsg[] = "ON\n\r";
 	char offMsg[] = "OFF\n\r";
+	int dayCounter = 0;
 	
 	unsigned char n5110_buffer[6][84];	//6 Rows 84 Columns
 	
@@ -119,33 +120,54 @@ int main(void)
 	/* N5110 Init */
 	n5110_init(1);
 	
-	/* Agregamos una imagen*/
-	ImgType saitama_pic = {.h = saitama_rows, .w = saitama_cols, .x = 0, .y = 0};
-	saitama_pic.image[0] = saitama;
+	/* DISPLAY IMAGES*/
+	/* INDEX 
+			0 = NO-DAY-SELECTED
+			1 = LUNES
+			2 = MARTES
+			3 = MIERCOLES
+			4 = JUEVES
+			5 = VIERNES
+			6 = SABADO
+			7 = DOMINGO
+	*/
+	ImgType display_pic = {.h = display_rows, .w = display_cols, .x = 0, .y = 0};
+	display_pic.image[0] = display;
+	display_pic.image[1] = display_lunes;
+	display_pic.image[2] = display_martes;
+	display_pic.image[3] = display_miercoles;
+	display_pic.image[4] = display_jueves;
+	display_pic.image[5] = display_viernes;
+	display_pic.image[6] = display_sabado;
+	display_pic.image[7] = display_domingo;
 	
-	/* Agregamos otra imagen*/
-	ImgType goku_pic = {.h = Goku2_rows, .w = Goku2_cols, .x = 0, .y = 0};
-	goku_pic.image[1] = Goku2;
 	
 	
 	
 	n5110_clear();
 	n5110_clear_buffer(n5110_buffer);
 	
-	n5110_update_buffer(goku_pic, 1, n5110_buffer);
-	//n5110_update_str_buffer(3,1,"Hello",n5110_buffer);
-	
-	n5110_print_buffer(n5110_buffer);
+	n5110_update_buffer(display_pic, 0, n5110_buffer);
+	/* MEMO: Con el update str buffer podes agregar una string 
+	si el fondo no tiene nada. 
+	Asi que podemos poner la hora, abajo la temperatura y humedad por separado.
+		Y despues hacer el Clear de todo junto y repetir*/
+
 	
 	
 	
 	
 	//La lectura queda en bucle infinito. Solo puedo leeer el DHT22 una UNICA vez. Sad
 	if (DHT22_GetTemp_Humidity(&Temperature,&Humidity) == 1 ){
-	sprintf(buf, "\r\nTemp (C) =\t %.1f\r\nHumidity (%%) =\t %.1f%%\r\n", Temperature, Humidity);
+	sprintf(buf, "T %.1f H %.1f%%", Temperature, Humidity);
 	HAL_UART_Transmit(&huart1,(uint8_t *)buf,strlen(buf),HAL_MAX_DELAY);
 	HAL_Delay(1000);
 	}
+	
+	n5110_update_str_buffer(1,6,buf,n5110_buffer);
+	n5110_update_str_buffer(3,20,"HH:MM:SS",n5110_buffer);
+	
+	n5110_print_buffer(n5110_buffer);
 	
 	
 	
@@ -168,7 +190,18 @@ int main(void)
 		
 		
 		//DelayMs(50);
-		HAL_Delay(1000);
+		HAL_Delay(2000);
+		n5110_update_buffer(display_pic, 1, n5110_buffer);
+		n5110_print_buffer(n5110_buffer);
+		HAL_Delay(2000);
+		n5110_update_buffer(display_pic, 2, n5110_buffer);
+		n5110_print_buffer(n5110_buffer);
+		HAL_Delay(2000);
+		n5110_update_buffer(display_pic, 3, n5110_buffer);
+		n5110_print_buffer(n5110_buffer);
+		HAL_Delay(2000);
+		n5110_update_buffer(display_pic, 4, n5110_buffer);
+		n5110_print_buffer(n5110_buffer);
 		
 		/*
 		spi_tx(1,'H');
