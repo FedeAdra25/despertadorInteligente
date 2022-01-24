@@ -202,6 +202,12 @@ int main(void)
 		//DelayMs(50);
 		HAL_Delay(1000);
 		
+			if (DHT22_GetTemp_Humidity(&Temperature,&Humidity) == 1 ){
+	sprintf(buf, "T %.1f H %.1f%%", Temperature, Humidity);
+	HAL_UART_Transmit(&huart1,(uint8_t *)buf,strlen(buf),HAL_MAX_DELAY);
+	HAL_Delay(1000);
+	}
+		
 		/*
 		spi_tx(1,'H');
 		spi_tx(1,'e');
