@@ -1,5 +1,4 @@
 testingcubemx_led\n5110_drive.o: ..\Core\Src\n5110_drive.c
-testingcubemx_led\n5110_drive.o: ../Core/Inc/systick_time.h
 testingcubemx_led\n5110_drive.o: ../Core/Inc/gp_drive.h
 testingcubemx_led\n5110_drive.o: ../Core/Inc/SPI_drive.h
 testingcubemx_led\n5110_drive.o: ../Core/Inc/n5110_drive.h
