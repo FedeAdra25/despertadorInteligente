@@ -438,6 +438,11 @@
               <FileType>1</FileType>
               <FilePath>..\Core\Src\n5110_drive.c</FilePath>
             </File>
+            <File>
+              <FileName>i2c_drive.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\i2c_drive.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

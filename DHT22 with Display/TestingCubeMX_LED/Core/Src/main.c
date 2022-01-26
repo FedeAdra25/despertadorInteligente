@@ -21,12 +21,14 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "i2c_drive.h"
 #include "MY_DHT22.h"
 #include <stdio.h>
 #include "gp_drive.h"
 #include "systick_time.h"
 #include "SPI_Drive.h"
 #include "n5110_drive.h"
+
 
 /* USER CODE END Includes */
 
@@ -103,6 +105,9 @@ int main(void)
 	char onMsg[] = "ON\n\r";
 	char offMsg[] = "OFF\n\r";
 	int dayCounter = 0;
+	
+	/*I2C AUX VAR*/
+	char data[2] = {0x01,0x02};
 	
 	unsigned char n5110_buffer[6][84];	//6 Rows 84 Columns
 	
