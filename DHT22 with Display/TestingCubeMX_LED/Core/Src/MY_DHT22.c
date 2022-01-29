@@ -38,7 +38,11 @@ void DHT22_Init(GPIO_TypeDef* DataPort, uint16_t DataPin)
 	oneWire_PIN = DataPin;
 	for(uint8_t i=0; i<16; i++)
 	{
-		if(DataPin & (1 << i))
+		if(DataPin & (1 << i))		
+			/*Me guardo el numero de PIN que voy a usar.
+		Por eso hace DataPin (el pin que elegimos antes) 
+		AND (1 << i) y testea en los 16 PINS posibles
+		*/
 		{
 			oneWirePin_Idx = i;
 			break;
@@ -72,6 +76,7 @@ static void ONE_WIRE_PinMode(OnePinMode_Typedef mode)
 //One Wire pin HIGH/LOW Write
 static void ONE_WIRE_Pin_Write(bool state)
 {
+	/* Si recibe un 1 hace PIN_SET y si recibe un 0 hace PIN_RESET*/
 	if(state) HAL_GPIO_WritePin(oneWire_PORT, oneWire_PIN, GPIO_PIN_SET);
 	else HAL_GPIO_WritePin(oneWire_PORT, oneWire_PIN, GPIO_PIN_RESET);
 }

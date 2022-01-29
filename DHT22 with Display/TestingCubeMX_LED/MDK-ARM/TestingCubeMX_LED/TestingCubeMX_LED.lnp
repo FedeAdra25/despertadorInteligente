@@ -8,6 +8,7 @@
 "testingcubemx_led\systick_time.o"
 "testingcubemx_led\spi_drive.o"
 "testingcubemx_led\n5110_drive.o"
+"testingcubemx_led\i2c_drive.o"
 "testingcubemx_led\stm32f1xx_hal_gpio_ex.o"
 "testingcubemx_led\stm32f1xx_hal_tim.o"
 "testingcubemx_led\stm32f1xx_hal_tim_ex.o"

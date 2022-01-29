@@ -26,12 +26,6 @@ testingcubemx_led\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flas
 testingcubemx_led\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 testingcubemx_led\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 testingcubemx_led\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
-testingcubemx_led\main.o: ../Core/Inc/MY_DHT22.h
-testingcubemx_led\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-testingcubemx_led\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-testingcubemx_led\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
-testingcubemx_led\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-testingcubemx_led\main.o: ../Core/Inc/gp_drive.h
-testingcubemx_led\main.o: ../Core/Inc/systick_time.h
-testingcubemx_led\main.o: ../Core/Inc/SPI_Drive.h
-testingcubemx_led\main.o: ../Core/Inc/n5110_drive.h
+testingcubemx_led\main.o: ../Core/Inc/i2c_drive.h
+testingcubemx_led\main.o: C:\Users\Reino\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h
+testingcubemx_led\main.o: .\RTE\_TestingCubeMX_LED\RTE_Components.h
