@@ -16,7 +16,7 @@
 void I2C_Init(){
     //Config GPIO pins
     RCC->APB2ENR |= (0xFC); /* enable clocks for GPIOs */
-    RCC->APB1ENR |= (1<<21); /* enable clock for I2C1 */
+    //RCC->APB1ENR |= (1<<21); /* enable clock for I2C1 */
     GPIOB->CRL |= 0x77000000; /* configure PA6 and PA7 as GPO. open drain */
     I2C_set_scl();
     I2C_set_sda();
