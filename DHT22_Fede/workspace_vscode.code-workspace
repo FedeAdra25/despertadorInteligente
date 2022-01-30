@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "DHT22_Fede",
+			"path": "."
+		},
+		{
+			"name": "DHT22",
+			"path": "..\\DHT22"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"my_dht22.h": "c"
+		}
+	}
+}
