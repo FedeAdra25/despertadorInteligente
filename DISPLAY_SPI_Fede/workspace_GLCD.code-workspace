@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "STM32F103C6"
+		},
+		{
+			"path": "..\\..\\..\\..\\Chap18"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"spi_drive.h": "c",
+			"stm32f103x6.h": "c"
+		}
+	}
+}
