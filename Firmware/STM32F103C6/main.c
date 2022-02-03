@@ -17,7 +17,9 @@ int main (void){
   GLCD_Init();
   DS1307_Init();
   DHT22_Init();
-
+  delay_ms(100);
+  GLCD_drawImage(0,0,(uint8_t *)welcome_screen,GLCD_WIDTH,GLCD_HEIGHT);
+  delay_ms(500);
   while(1){
     delay_ms(500);
     DHT22_GetTemp_Humidity(&temp, &humidity);
