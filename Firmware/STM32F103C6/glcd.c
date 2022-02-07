@@ -121,7 +121,7 @@ void GLCD_clean(void){
 		for(j=0;j<GLCD_WIDTH;j++){
 			glcd_current_state[i][j] = 0;
 			glcd_sendData(0x75);
-			delay_us(1);
+			//delay_us(1);
 		}
 	}
 	GLCD_setXY(0,0);

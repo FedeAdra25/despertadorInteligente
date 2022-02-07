@@ -136,7 +136,7 @@ static void DS1307_config(){
 	I2C_SendData(0x0);	/* set addr. pointer to 0 */
 	I2C_SendData(0x00); /* second */
 	I2C_SendData(0x00); /* min */
-	I2C_SendData(0x40); /* hour in 24-h format*/
+	I2C_SendData(0x4A); /* hour in 24-h format*/
 	I2C_SendData(MONDAY); /* day of week */
 	I2C_SendData(0x14); /* day of month */
 	I2C_SendData(0x02); /* month */
