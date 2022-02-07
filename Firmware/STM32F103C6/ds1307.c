@@ -193,3 +193,22 @@ static uint8_t* day2string(uint8_t day_r){
     }
     return day;
 }
+uint8_t DS1307_dateEquals(RTC_DATE_t *date1, RTC_DATE_t *date2){
+    return (date1->day == date2->day && date1->date == date2->date && date1->month == date2->month && date1->year == date2->year);
+}
+uint8_t DS1307_timeEquals(RTC_TIME_t *time1, RTC_TIME_t *time2){
+    return (time1->hours == time2->hours && time1->minutes == time2->minutes && time1->seconds == time2->seconds);
+}
+
+void DS1307_copyTime(RTC_TIME_t *dest, RTC_TIME_t *src){
+    dest->hours = src->hours;
+    dest->minutes = src->minutes;
+    dest->seconds = src->seconds;
+}
+void DS1307_copyDate(RTC_DATE_t *dest, RTC_DATE_t *src){
+    dest->day = src->day;
+    dest->date = src->date;
+    dest->month = src->month;
+    dest->year = src->year;
+}
+

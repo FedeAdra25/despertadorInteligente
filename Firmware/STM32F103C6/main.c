@@ -14,14 +14,19 @@ RTC_TIME_t time;
 RTC_DATE_t date;
 
 int main (void){
+  RCC->APB2ENR= 0xFC;
+  MEF_Init();
   GLCD_Init();
   DS1307_Init();
   DHT22_Init();
   delay_ms(100);
-  GLCD_drawImage(0,0,(uint8_t *)welcome_screen,GLCD_WIDTH,GLCD_HEIGHT);
-  delay_ms(500);
+  //GLCD_drawImage(0,0,(uint8_t *)welcome_screen,GLCD_WIDTH,GLCD_HEIGHT);
+  //delay_ms(500);
+  //GLCD_drawImage(0,0,(uint8_t *)display,GLCD_WIDTH,GLCD_HEIGHT);
   while(1){
-    delay_ms(500);
+    delay_ms(100);
+    MEF_Update();
+    /*
     DHT22_GetTemp_Humidity(&temp, &humidity);
     DS1307_get_time(&time);
     DS1307_get_date(&date);
@@ -41,6 +46,7 @@ int main (void){
     sprintf(str,"Date: %02d/%02d/%02d",date.date,date.month,date.year);
     GLCD_setXY(3,4);
     GLCD_sendString(str);
+    */
   }
   return 0;
 }

@@ -6,5 +6,7 @@
 #include "dht22.h"
 #include "ds1307.h"
 #include "glcd.h"
+#include "mef.h"
+
 
 #endif

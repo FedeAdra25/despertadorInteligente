@@ -55,6 +55,9 @@ uint8_t * DS1307_get_time_string(RTC_TIME_t time);
 uint8_t * DS1307_get_date_string(RTC_DATE_t date);
 uint8_t * DS1307_get_date_string_with_day(RTC_DATE_t date);
 
-
-
+//Utilitary to compare dates and times
+uint8_t DS1307_dateEquals(RTC_DATE_t *date1, RTC_DATE_t *date2);
+uint8_t DS1307_timeEquals(RTC_TIME_t *time1, RTC_TIME_t *time2);
+void DS1307_copyTime(RTC_TIME_t *dest, RTC_TIME_t *src);
+void DS1307_copyDate(RTC_DATE_t *dest, RTC_DATE_t *src);
 #endif
