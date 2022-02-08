@@ -34,6 +34,8 @@ void renderTime(uint8_t);
 void updateTemperatureAndHumidity(void);
 void renderTemperatureAndHumidity(uint8_t);
 
+void animateCurrentSelection(void);
+void animateCurrentSelection_alarm(void);
 //Functions for setDate and setAlarm states
 void writeTime(RTC_TIME_t);
 void writeDate(RTC_DATE_t);
@@ -163,6 +165,7 @@ void MEF_Update(void)
             if (current_selection < SELECTION_START)
                 current_selection = SELECTION_END;
         }
+        animateCurrentSelection();
         break;
     case SETTING_ALARM:
         renderSetAlarm();
@@ -206,6 +209,7 @@ void MEF_Update(void)
             if (current_selection < SELECTION_START_ALARM)
                 current_selection = SELECTION_END_ALARM;
         }
+        animateCurrentSelection_alarm();
         /*TODO*/
         break;
     }
@@ -512,5 +516,61 @@ void renderTime_alarm(uint8_t force)
     time_old = time_alarm;
     sprintf(str, "%02d:%02d:%02d", time_alarm.hours, time_alarm.minutes, time_alarm.seconds);
     GLCD_setXY(23, 4);
+    GLCD_sendString(str);
+}
+
+void animateCurrentSelection(void){
+    GLCD_setXY(13,1);
+    switch(current_selection){
+        case SELECTION_YEAR:
+            sprintf(str,"SEL A'O: %2d",date.year);
+        break;
+        case SELECTION_MONTH:
+            sprintf(str,"SEL MES: %2d",date.month);
+            //TODO: animate month
+        break;
+        case SELECTION_DATE:
+            sprintf(str,"SEL DIA: %2d",date.date);
+            //TODO: animate date
+        break;
+        case SELECTION_DAY:
+            sprintf(str,"SEL: DIASEM");
+            //TODO: animate day
+        break;
+        case SELECTION_HOUR:
+            sprintf(str,"SEL HS: %2d ",time.hours);
+            //TODO: animate hour
+        break;
+        case SELECTION_MINUTE:
+            sprintf(str,"SEL MIN: %2d",time.minutes);
+            //TODO: animate minute
+        break;
+        case SELECTION_SECOND:
+            sprintf(str,"SEL SEG: %2d",time.seconds);
+            //TODO: animate second
+        break;
+        case SELECTION_NONE:
+            sprintf(str," SEL: NONE ");
+        default: break;
+    }
+    GLCD_sendString(str);
+}
+void animateCurrentSelection_alarm(void){
+    GLCD_setXY(13,1);
+    switch(current_selection){
+        case SELECTION_HOUR:
+            sprintf(str,"SEL HS: %2d ",time_alarm.hours);
+            //TODO: animate hour
+        break;
+        case SELECTION_MINUTE:
+            sprintf(str,"SEL MIN: %2d",time_alarm.minutes);
+            //TODO: animate minute
+        break;
+        case SELECTION_SECOND:
+            sprintf(str,"SEL SEG: %2d",time_alarm.seconds);
+            //TODO: animate second
+        break;
+        default: break;
+    }
     GLCD_sendString(str);
 }
