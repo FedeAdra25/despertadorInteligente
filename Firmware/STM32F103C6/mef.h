@@ -4,6 +4,7 @@
 #include <stm32f103x6.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "gpio.h"
 #include "dht22.h"
 #include "ds1307.h"
 #include "glcd.h"

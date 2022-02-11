@@ -42,16 +42,16 @@ BIN2HEX=fromelf.exe
 #        H:/Fede/Facultad/2021/2do cuatrimestre/Taller de proyecto I/Prácticas/Práctica 4/Project/Firmware/STM32F103C6/dht22.c
 #     H:/Fede/Facultad/2021/2do cuatrimestre/Taller de proyecto I/Prácticas/Práctica 4/Project/Firmware/STM32F103C6/Debug/mef.o: TOOL=CC
 #        H:/Fede/Facultad/2021/2do cuatrimestre/Taller de proyecto I/Prácticas/Práctica 4/Project/Firmware/STM32F103C6/mef.c
-#     H:/Fede/Facultad/2021/2do cuatrimestre/Taller de proyecto I/Prácticas/Práctica 4/Project/Firmware/STM32F103C6/Debug/seos.o: TOOL=CC
-#        H:/Fede/Facultad/2021/2do cuatrimestre/Taller de proyecto I/Prácticas/Práctica 4/Project/Firmware/STM32F103C6/seos.c
+#     H:/Fede/Facultad/2021/2do cuatrimestre/Taller de proyecto I/Prácticas/Práctica 4/Project/Firmware/STM32F103C6/Debug/gpio.o: TOOL=CC
+#        H:/Fede/Facultad/2021/2do cuatrimestre/Taller de proyecto I/Prácticas/Práctica 4/Project/Firmware/STM32F103C6/gpio.c
 
 # Build tree:
 all:	Debug
 
 Debug:	Debug.elf
 
-Debug.elf:	main.o system_stm32f1xx.o startup_stm32f103.o ds1307.o i2c.o lcd.o glcd.o spi_drive.o utils.o dht22.o mef.o seos.o 
-	$(LD)  $(LDFLAGS)  "main.o" "system_stm32f1xx.o" "startup_stm32f103.o" "ds1307.o" "i2c.o" "lcd.o" "glcd.o" "spi_drive.o" "utils.o" "dht22.o" "mef.o" "seos.o" --output "Debug.elf"
+Debug.elf:	main.o system_stm32f1xx.o startup_stm32f103.o ds1307.o i2c.o lcd.o glcd.o spi_drive.o utils.o dht22.o mef.o gpio.o 
+	$(LD)  $(LDFLAGS)  "main.o" "system_stm32f1xx.o" "startup_stm32f103.o" "ds1307.o" "i2c.o" "lcd.o" "glcd.o" "spi_drive.o" "utils.o" "dht22.o" "mef.o" "gpio.o" --output "Debug.elf"
 
 main.o:	../main.c 
 	$(CC) $(CCFLAGS)  "../main.c" -c -o "main.o"
@@ -86,8 +86,8 @@ dht22.o:	../dht22.c
 mef.o:	../mef.c 
 	$(CC) $(CCFLAGS)  "../mef.c" -c -o "mef.o"
 
-seos.o:	../seos.c 
-	$(CC) $(CCFLAGS)  "../seos.c" -c -o "seos.o"
+gpio.o:	../gpio.c 
+	$(CC) $(CCFLAGS)  "../gpio.c" -c -o "gpio.o"
 
 # tidy - delete all temporary files which are not involved in the target generation
 tidy:
@@ -106,4 +106,4 @@ clean:	tidy
 	rm -rf utils.o
 	rm -rf dht22.o
 	rm -rf mef.o
-	rm -rf seos.o
+	rm -rf gpio.o
