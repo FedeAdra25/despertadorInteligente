@@ -31,7 +31,6 @@ void GLCD_Init(){
 	//DISPLAY_PORT_CONFIG = (0x0000000B<<(4*GLCD_DIN) | 0x0000000B << (4*GLCD_SCK) | 0x00000003 << (4*GLCD_CS) | 0x00000003 << (4*GLCD_RST) | 0x00000003 << (4*GLCD_DC));
 	DISPLAY_PORT_CONFIG = 0xB2B34433;
 
-
 	//Set rst pin in case it was not already set
 	GLCD_set_RST();
 	delay_ms(10);
@@ -42,24 +41,13 @@ void GLCD_Init(){
 	
 	GLCD_clear_DC();
 	
-	//Setup Screenlight Pin
-	/*Proteus always shows the light on*/
-	/* IDK
-	init_GP(PA,2,OUT50,O_GP_PP);
-	init_GP(PA,1,OUT50,O_GP_PP);
-	W_GP(PA,2,HIGH);
-	delay_ms(1000);								//1s Delay
-	W_GP(PA,2,LOW);
-	*/
-
-	
 	//Init the LCD ITS A HOLE SEQUENCE
 	glcd_sendCommand(0x21); //Switch to extended mode
 	glcd_sendCommand(0x84); //Set LCD Vop to 3.3V
 	
 	glcd_sendCommand(0x20); //Switch to basic instruction set
 	glcd_sendCommand(0x0C); //Set normal display mode
-	GLCD_clean();
+	GLCD_drawImage(0, 0, (uint8_t *)welcome_screen, GLCD_WIDTH, GLCD_HEIGHT);
 }
 
 /*
@@ -120,7 +108,7 @@ void GLCD_clean(void){
 	for(i=0;i<GLCD_HEIGHT;i++){
 		for(j=0;j<GLCD_WIDTH;j++){
 			glcd_current_state[i][j] = 0;
-			glcd_sendData(0x75);
+			glcd_sendData(0x00);
 			//delay_us(1);
 		}
 	}
