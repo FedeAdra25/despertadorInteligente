@@ -22,11 +22,6 @@ void I2C_Init(){
     I2C_set_sda();
 }
 
-
-void i2c_waitForReady(){
-    while((I2C1->SR2&(1<<1)) != 0); /* check bus busy (FLAG) via pooling */
-}
-
 //Send start signal
 void I2C_SendStart(){
     I2C_bus_init(); //put both pins on high
@@ -39,7 +34,6 @@ void I2C_SendStart(){
     HALF_BIT_DELAY
     I2C_clear_scl(); //SCL goes low
     HALF_BIT_DELAY
-
 }
 
 //Send stop signal

@@ -14,7 +14,6 @@
 void I2C_Init(void);
 void I2C_SendStart(void);
 void I2C_SendStop(void);
-void I2C_WaitForReady(void);
 unsigned char I2C_SendAddrForWrite(unsigned char);
 unsigned char I2C_SendAddrForRead(unsigned char);
 unsigned char I2C_SendData(unsigned char);

@@ -410,8 +410,10 @@ void modify_date(uint8_t selection, int8_t increment){
         break;
     case SELECTION_DAY:
         date.day += increment;
-        if (date.day > 6)
-            date.day = 0;
+        if (date.day > SUNDAY)
+            date.day = MONDAY;
+        if(date.day<MONDAY)
+            date.day = SUNDAY;
         break;
     case SELECTION_HOUR:
         time.hours += increment;

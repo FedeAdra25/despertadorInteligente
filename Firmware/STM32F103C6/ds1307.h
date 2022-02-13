@@ -22,13 +22,13 @@
 #define DS1307_YEAR_REGISTER 0x06
 #define DS1307_CONTROL_REGISTER 0x07
 
-#define MONDAY 0
-#define TUESDAY 1
-#define WEDNESDAY 2 
-#define THURSDAY 3
-#define FRIDAY 4
-#define SATURDAY 5
-#define SUNDAY 6
+#define MONDAY 1
+#define TUESDAY 2
+#define WEDNESDAY 3 
+#define THURSDAY 4
+#define FRIDAY 5
+#define SATURDAY 6
+#define SUNDAY 7
 
 
 typedef struct{
