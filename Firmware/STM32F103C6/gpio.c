@@ -3,7 +3,7 @@
 void GPIO_Init(){
     //---
     GPIOA->CRH = 0x44444488; //PA8 and PA9 as input with pull-up 
-    GPIOB->CRH = 0x88884434; //PB8,9,10,11,12,13 as input with pull-up
+    GPIOB->CRH = 0x88884434; //PB12, 13,14,15 as input with pull-up
     //---                   PB9 as output with push-pull (0011)
 }
 

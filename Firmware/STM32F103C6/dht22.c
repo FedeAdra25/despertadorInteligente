@@ -83,7 +83,7 @@ uint8_t ReadByte(){
         //Wait for DHT22 response
         while(DHT22_data_get()==0); //Wait until PA15 gets high (~50us)
         //PA15 is high, if it stills high after more than 28us it means DHT22 is sending a 1
-        //We wait for 40us just in case
+        //We wait for 29us just in case
         delay_us(29);
         if(DHT22_data_get() !=0)
             datar |= (1<<(7-i)); //We get PA15 state and set data bit accordingly
