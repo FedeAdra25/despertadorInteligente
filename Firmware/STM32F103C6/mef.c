@@ -422,12 +422,12 @@ void modify_date(uint8_t selection, int8_t increment){
         break;
     case SELECTION_MINUTE:
         time.minutes += increment;
-        if (time.minutes > 60)
+        if (time.minutes > 59)
             time.minutes = 0;
         break;
     case SELECTION_SECOND:
         time.seconds += increment;
-        if (time.seconds > 60)
+        if (time.seconds > 59)
             time.seconds = 0;
         break;
     default: break;
@@ -444,12 +444,12 @@ void modify_alarm(uint8_t selection, int8_t increment){
         break;
     case SELECTION_MINUTE:
         time_alarm.minutes += increment;
-        if (time_alarm.minutes > 60)
+        if (time_alarm.minutes > 59)
             time_alarm.minutes = 0;
         break;
     case SELECTION_SECOND:
         time_alarm.seconds += increment;
-        if (time_alarm.seconds > 60)
+        if (time_alarm.seconds > 59)
             time_alarm.seconds = 0;
         break;
     default: break;

@@ -67,7 +67,7 @@ void DS1307_set_date(RTC_DATE_t *date)
 	    I2C_SendStart();					   /* generate a start condition */
 	} while (I2C_SendAddrForWrite(0x68) == 0); /* repeat if returned false */
 
-	I2C_SendData(0x0);	/* set addr. pointer to 0 */
+	I2C_SendData(0x03);	/* set addr. pointer to 0 */
 	I2C_SendData(int2bcd(date->day)); /* day of week */
 	I2C_SendData(int2bcd(date->date)); /* day of month */
 	I2C_SendData(int2bcd(date->month)); /* month */
@@ -135,7 +135,7 @@ static void DS1307_config(){
 	} while (I2C_SendAddrForWrite(0x68) == 0); /* repeat if returned false */
 
 	I2C_SendData(0x0);	/* set addr. pointer to 0 */
-	I2C_SendData(0x00); /* second */
+	I2C_SendData(0x50); /* second */
 	I2C_SendData(0x00); /* min */
 	I2C_SendData(0x0A); /* hour in 24-h format*/
 	I2C_SendData(MONDAY); /* day of week */
